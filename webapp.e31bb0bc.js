@@ -12772,8 +12772,12 @@ module.exports = {
   "url": "https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona10032020_2.csv",
   "total_infections": " 380"
 };
-},{}],"circle.svg":[function(require,module,exports) {
-module.exports = "/circle.7270b7c2.svg";
+},{}],"classes.json":[function(require,module,exports) {
+module.exports = {
+  "gemeenten_corona": {
+    "aantal": [0.0, 1.0, 4.0, 11.0, 27.0, 29.0]
+  }
+};
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -12805,7 +12809,7 @@ var _gemeenten_borders_outside = _interopRequireDefault(require("./data/gemeente
 
 var _updated = _interopRequireDefault(require("./updated.json"));
 
-var _circle = _interopRequireDefault(require("./circle.svg"));
+var _classes = _interopRequireDefault(require("./classes.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12866,7 +12870,7 @@ var markers = L.markerClusterGroup({
     fillOpacity: 0.5
   },
   singleMarkerMode: true,
-  attribution: "Data coronavirus besmettingen: <a href=\"https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19\">RIVM</a>"
+  attribution: 'Data coronavirus besmettingen: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
 });
 var geojsonMarkers = L.geoJSON(_corona_markers.default);
 markers.addLayers(geojsonMarkers);
@@ -12882,12 +12886,12 @@ markers.on('click', function (a) {
 });
 
 function getColor(value) {
-  var colors = ['#253494', '#2c7fb8', '#41b6c4', '#a1dab4', '#ffffcc'];
-  var breaks = [0.0, 1.0, 4.0, 9.0, 19.0, 27.0];
+  var colors = ['#ffffcc', '#a1dab4', '#41b6c4', '#2c7fb8', '#253494'];
+  var breaks = _classes.default.gemeenten_corona.aantal;
   var color;
 
   for (var i = 1; i < breaks.length; i++) {
-    if (i == 1) {
+    if (i === 1) {
       if (value > breaks[0] && value <= breaks[i]) {
         color = colors[i - 1];
         break;
@@ -12913,12 +12917,20 @@ function iconByStations(feature) {
       }
     });
     var color = getColor(feature.properties.aantal);
-    var achenSvgString = "<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='50' cy='50' r='40' stroke='darkgray' stroke-width='1' fill='".concat(color, "' /></svg>");
-    var myIconUrl = encodeURI("data:image/svg+xml," + achenSvgString).replace('#', '%23');
+    var achenSvgString = "<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='50' cy='50' r='40' stroke='gray' stroke-width='2' fill='".concat(color, "' /></svg>");
+    var myIconUrl = encodeURI('data:image/svg+xml,' + achenSvgString).replace('#', '%23');
     var rectIcon = new CustomIcon({
       iconUrl: myIconUrl
     });
     return rectIcon;
+  }
+}
+
+function getLegend() {
+  if (map.hasLayer(metroLayer)) {
+    return '<div class="legend-div"><div style="background-color:#ffffcc;" class="marker-cluster legend-item"></div>1 Besmettingen</div>' + '<div class="legend-div"><div style="background-color:#a1dab4;" class="marker-cluster legend-item"></div>1-4 Besmettingen</div>' + '<div class="legend-div"><div style="background-color:#41b6c4;" class="marker-cluster legend-item"></div>5-11 Besmettingen</div>' + '<div class="legend-div"><div style="background-color:#2c7fb8;" class="marker-cluster legend-item"></div>12-27 Besmettingen</div>' + '<div class="legend-div"><div style="background-color:#253494;" class="marker-cluster legend-item"></div>28-29 Besmettingen</div>';
+  } else {
+    return '<div class="legend-div"><div class="marker-cluster-small legend-item"></div>0-9 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-medium legend-item"></div>10-99 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-large legend-item"></div>>99 Besmettingen</div>';
   }
 } // create the GeoJSON layer and call the styling function with each marker
 
@@ -12934,25 +12946,6 @@ var metroLayer = L.geoJSON(_gemeenten_simplified_point.default, {
 }).bindPopup(function (layer) {
   return '<p><b>Gemeente: </b>' + layer.feature.properties.Gemeentenaam + '</p>' + '<p><b>Aantal gevallen: </b>' + layer.feature.properties.aantal + '</p>';
 });
-
-function style(feature) {
-  var color = getColor(feature.properties.aantal);
-  if (feature.properties.aantal === 0) color = 'white';
-  return {
-    fillColor: color,
-    weight: 1,
-    opacity: 1,
-    color: 'darkgray',
-    dashArray: '3',
-    fillOpacity: 0.9
-  };
-}
-
-var gemChoropleth = L.geoJson(_gemeenten_simplified.default, {
-  style: style
-}).bindPopup(function (layer) {
-  return '<p><b>Gemeente: </b>' + layer.feature.properties.Gemeentenaam + '</p>' + '<p><b>Aantal gevallen: </b>' + layer.feature.properties.aantal + '</p>';
-});
 L.Control.Command = L.Control.extend({
   options: {
     position: 'topright'
@@ -12961,7 +12954,7 @@ L.Control.Command = L.Control.extend({
     console.log(this);
     var controlDiv = L.DomUtil.create('div', 'leaflet-control-command');
     var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
-    controlUI.innerHTML = '<h1 style="margin-bottom:5px;">Corona Besmettingen in Nederland</h1>' + '<div class="legend-div"><div class="marker-cluster-small legend-item"></div>0-9 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-medium legend-item"></div>10-99 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-large legend-item"></div>>99 Besmettingen</div>' + '<button id="testButton">Click</button>' + "<p>Totaal aantal besmettingen: ".concat(_updated.default.total_infections, "&nbsp;&nbsp;|&nbsp;&nbsp;publicatie datum van de <a href=\"").concat(_updated.default.url, "\">data</a>: ").concat(_updated.default.date_data, "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"https://github.com/arbakker/corona-kaart\">broncode</a></p>");
+    controlUI.innerHTML = '<h1 style="margin-bottom:5px;">Corona Besmettingen in Nederland</h1><div id="legend">' + getLegend() + '</div><button id="testButton">Style</button>' + "<p>Totaal aantal besmettingen: ".concat(_updated.default.total_infections, "&nbsp;&nbsp;|&nbsp;&nbsp;publicatie datum van de <a href=\"").concat(_updated.default.url, "\">data</a>: ").concat(_updated.default.date_data, "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"https://github.com/arbakker/corona-kaart\">broncode</a></p>");
     return controlDiv;
   }
 });
@@ -12971,19 +12964,18 @@ L.control.command = function (options) {
 };
 
 L.control.command({}).addTo(map);
-document.getElementById("testButton").addEventListener("click", function () {
+document.getElementById('testButton').addEventListener('click', function () {
   if (map.hasLayer(metroLayer)) {
     map.removeLayer(metroLayer);
     map.addLayer(markers);
   } else if (map.hasLayer(markers)) {
     map.removeLayer(markers);
-    map.addLayer(gemChoropleth);
-  } else if (map.hasLayer(gemChoropleth)) {
-    map.removeLayer(gemChoropleth);
     map.addLayer(metroLayer);
   }
+
+  document.getElementById('legend').innerHTML = getLegend();
 });
-},{"leaflet/dist/leaflet":"node_modules/leaflet/dist/leaflet.js","leaflet.control.layers.tree":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.js","leaflet.control.layers.tree/L.Control.Layers.Tree.css":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.css","leaflet.markercluster/dist/leaflet.markercluster":"node_modules/leaflet.markercluster/dist/leaflet.markercluster.js","./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css","./index.css":"index.css","./data/corona_markers.json":"data/corona_markers.json","./data/gemeenten_simplified.json":"data/gemeenten_simplified.json","./data/gemeenten_simplified_point.json":"data/gemeenten_simplified_point.json","./data/gemeenten_borders_simplified.json":"data/gemeenten_borders_simplified.json","./data/gemeenten_borders_outside.json":"data/gemeenten_borders_outside.json","./updated.json":"updated.json","./circle.svg":"circle.svg"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"leaflet/dist/leaflet":"node_modules/leaflet/dist/leaflet.js","leaflet.control.layers.tree":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.js","leaflet.control.layers.tree/L.Control.Layers.Tree.css":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.css","leaflet.markercluster/dist/leaflet.markercluster":"node_modules/leaflet.markercluster/dist/leaflet.markercluster.js","./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css","./index.css":"index.css","./data/corona_markers.json":"data/corona_markers.json","./data/gemeenten_simplified.json":"data/gemeenten_simplified.json","./data/gemeenten_simplified_point.json":"data/gemeenten_simplified_point.json","./data/gemeenten_borders_simplified.json":"data/gemeenten_borders_simplified.json","./data/gemeenten_borders_outside.json":"data/gemeenten_borders_outside.json","./updated.json":"updated.json","./classes.json":"classes.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -13011,7 +13003,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38499" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
