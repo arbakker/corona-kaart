@@ -782,40 +782,85 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 body {
     margin: 0px;
-    background-color: white;
+    background-color: #F0F0F0;
 }
 
 .leaflet-container {
-    background: white;
-}
-
-.marker-cluster-small div {
-    background-color: #e7e1ef;
-}
-
-.marker-cluster-medium div {
-    background-color: #c994c7;
-}
-
-.marker-cluster-large div {
-    background-color: #dd1c77;
+    background: #F0F0F0;
 }
 
 .marker-cluster-small {
-	background-color:  rgba(231,225,239, 0.6);
+    background-color: rgba(231, 225, 239, 0.6);
+    /* background-color: black; */
+    size: 1em;
 }
 
 .marker-cluster-medium {
-	background-color:   rgba(201,148,199, 0.6);
+    background-color: rgba(201, 148, 199, 0.6);
 }
 
 .marker-cluster-large {
-	background-color:  rgba(221,28,119, 0.6);
+    background-color: #dd1c7799;
+}
+
+.marker-cluster-small div, .marker-cluster-small.legend-item {
+    background-color: #e7e1ef;
+}
+
+.marker-cluster-medium div, .marker-cluster-medium.legend-item {
+    background-color: #c994c7;
+}
+
+.marker-cluster-large div, .marker-cluster-large.legend-item {
+    background-color: #dd1c77;
+
 }
 
 #mapid .leaflet-layer {
-     filter: brightness(110%) grayscale(90%)  ;
+    filter: grayscale();
+    /* brightness(80%) */
+    /* sepia(50%)  */
+}
 
+.leaflet-control-command-interior {
+    width: 70vw;
+    max-width: 500px;
+    height: 120px;
+    float: right;
+    right: 0;
+    background-repeat: no-repeat;
+    padding: 3px;
+    padding-left:1em;
+    padding-right:1em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.65);
+    cursor: auto;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.leaflet-control-command-interior:hover {
+    background-color: #F4F4F4;
+}
+
+@media only screen and (max-width: 600px) {
+    .leaflet-control-command-interior {
+        display: none
+    }
+}
+
+.legend-item {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
+    border-radius: 1em;
+}
+
+.legend-div{
+    margin-right: 0.5em;display:inline-block;
 }
 
 /*# sourceMappingURL=/webapp.e31bb0bc.css.map */

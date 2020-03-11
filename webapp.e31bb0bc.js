@@ -821,6 +821,36 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Amsterdam",
+      "code": "0363"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.90454395880494, 52.373442677628717]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Amsterdam",
+      "code": "0363"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.90454395880494, 52.373442677628717]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "'s-Hertogenbosch",
+      "code": "0796"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.351926203101234, 51.716809335548959]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "'s-Hertogenbosch",
       "code": "0796"
     },
@@ -847,6 +877,16 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [5.351926203101234, 51.716809335548959]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Peel en Maas",
+      "code": "1894"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.994849855915939, 51.336302164452071]
     }
   }, {
     "type": "Feature",
@@ -951,6 +991,16 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Nuenen, Gerwen en Nederwetten",
+      "code": "0820"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.549464210239438, 51.478601888624056]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "De Bilt",
       "code": "0310"
     },
@@ -1041,12 +1091,12 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
-      "gemeentenaam": "Uden",
-      "code": "0856"
+      "gemeentenaam": "Schagen",
+      "code": "0441"
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [5.65184538449909, 51.655489641462964]
+      "coordinates": [4.742217472260063, 52.78732555746047]
     }
   }, {
     "type": "Feature",
@@ -1157,6 +1207,36 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [5.65184538449909, 51.655489641462964]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Uden",
+      "code": "0856"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.65184538449909, 51.655489641462964]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Uden",
+      "code": "0856"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.65184538449909, 51.655489641462964]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Maastricht",
+      "code": "0935"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.699530381059366, 50.852967145591229]
     }
   }, {
     "type": "Feature",
@@ -1387,6 +1467,36 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [5.296924502350473, 51.776250815239109]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Ermelo",
+      "code": "0233"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.666163787726602, 52.28824770441242]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Opsterland",
+      "code": "0086"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.112756773170934, 53.049150451140932]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Opsterland",
+      "code": "0086"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.112756773170934, 53.049150451140932]
     }
   }, {
     "type": "Feature",
@@ -1721,6 +1831,46 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Tilburg",
+      "code": "0855"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.068324449040283, 51.580026772464493]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Tilburg",
+      "code": "0855"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.068324449040283, 51.580026772464493]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Leiden",
+      "code": "0546"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.485115575053258, 52.154982454473405]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Meierijstad",
+      "code": "1948"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.506397041370766, 51.592236704841945]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Meierijstad",
       "code": "1948"
     },
@@ -1851,12 +2001,62 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Etten-Leur",
+      "code": "0777"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.644966209814083, 51.578315087652847]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Etten-Leur",
+      "code": "0777"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.644966209814083, 51.578315087652847]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Boekel",
       "code": "0755"
     },
     "geometry": {
       "type": "Point",
       "coordinates": [5.693726026678925, 51.60667429194234]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Boekel",
+      "code": "0755"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.693726026678925, 51.60667429194234]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Coevorden",
+      "code": "0109"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.735911695668312, 52.740255478531068]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Coevorden",
+      "code": "0109"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.735911695668312, 52.740255478531068]
     }
   }, {
     "type": "Feature",
@@ -2091,12 +2291,72 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Helmond",
+      "code": "0794"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.656969875541203, 51.476151225287424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Helmond",
+      "code": "0794"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.656969875541203, 51.476151225287424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Helmond",
+      "code": "0794"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.656969875541203, 51.476151225287424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Helmond",
+      "code": "0794"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.656969875541203, 51.476151225287424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Gemert-Bakel",
       "code": "1652"
     },
     "geometry": {
       "type": "Point",
       "coordinates": [5.75429070684962, 51.540748398763633]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Gemert-Bakel",
+      "code": "1652"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.75429070684962, 51.540748398763633]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Leidschendam-Voorburg",
+      "code": "1916"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.422294385192383, 52.090330507717098]
     }
   }, {
     "type": "Feature",
@@ -2137,6 +2397,16 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [6.743564384977534, 52.312330673437714]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Rotterdam",
+      "code": "0599"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.276879581949601, 51.931017743854092]
     }
   }, {
     "type": "Feature",
@@ -2411,12 +2681,32 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Beekdaelen",
+      "code": "1954"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.897121163156082, 50.936725873227708]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Wijchen",
       "code": "0296"
     },
     "geometry": {
       "type": "Point",
       "coordinates": [5.70191345328336, 51.816735036161013]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Leudal",
+      "code": "1640"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.884817157395882, 51.239442870211988]
     }
   }, {
     "type": "Feature",
@@ -2621,6 +2911,26 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Utrecht",
+      "code": "0344"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.07475437190386, 52.091137978719885]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Berg en Dal",
+      "code": "1945"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.94981033591922, 51.819949292811977]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Hellendoorn",
       "code": "0163"
     },
@@ -2657,6 +2967,36 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [4.293009674594854, 52.07207116871971]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "'s-Gravenhage",
+      "code": "0518"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.293009674594854, 52.07207116871971]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Pijnacker-Nootdorp",
+      "code": "1926"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.42195366598497, 52.017529980101294]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Pijnacker-Nootdorp",
+      "code": "1926"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.42195366598497, 52.017529980101294]
     }
   }, {
     "type": "Feature",
@@ -2811,6 +3151,16 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Goes",
+      "code": "0664"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.844391430335104, 51.517107179692943]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Noordwijk",
       "code": "0575"
     },
@@ -2871,6 +3221,16 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Gouda",
+      "code": "0513"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.706203762558125, 52.015301504988287]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Zeist",
       "code": "0355"
     },
@@ -2881,12 +3241,12 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
-      "gemeentenaam": "Haarlem",
-      "code": "0392"
+      "gemeentenaam": "Zeist",
+      "code": "0355"
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [4.647530502365609, 52.383408082211389]
+      "coordinates": [5.255185646638755, 52.101965223337587]
     }
   }, {
     "type": "Feature",
@@ -3111,6 +3471,26 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Diemen",
+      "code": "0384"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.990496523636653, 52.337332438023651]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Diemen",
+      "code": "0384"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.990496523636653, 52.337332438023651]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Tiel",
       "code": "0281"
     },
@@ -3171,12 +3551,12 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
-      "gemeentenaam": "Sittard-Geleen",
-      "code": "1883"
+      "gemeentenaam": "Lansingerland",
+      "code": "1621"
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [5.8282044909993, 51.004858770846774]
+      "coordinates": [4.506107290127652, 52.004008267325496]
     }
   }, {
     "type": "Feature",
@@ -3247,6 +3627,76 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Sittard-Geleen",
+      "code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Eindhoven",
+      "code": "0772"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.458870799384706, 51.450022191775162]
     }
   }, {
     "type": "Feature",
@@ -3391,6 +3841,16 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Hardinxveld-Giessendam",
+      "code": "0523"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.852424178489662, 51.832614685788862]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Amstelveen",
       "code": "0362"
     },
@@ -3407,6 +3867,16 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [4.85148669610057, 52.289265956992494]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Rheden",
+      "code": "0275"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.051251933775643, 52.033539993820177]
     }
   }, {
     "type": "Feature",
@@ -3477,6 +3947,26 @@ module.exports = {
     "geometry": {
       "type": "Point",
       "coordinates": [4.649106198592863, 52.484808222913927]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Aalsmeer",
+      "code": "0358"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.755022704616899, 52.257696783919378]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Aalsmeer",
+      "code": "0358"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.755022704616899, 52.257696783919378]
     }
   }, {
     "type": "Feature",
@@ -3631,6 +4121,16 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Soest",
+      "code": "0342"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.296288805459032, 52.156190812286091]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Lingewaard",
       "code": "1705"
     },
@@ -3701,12 +4201,112 @@ module.exports = {
   }, {
     "type": "Feature",
     "properties": {
+      "gemeentenaam": "Alkmaar",
+      "code": "0361"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.803307611448407, 52.601791518750062]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
       "gemeentenaam": "Zundert",
       "code": "0879"
     },
     "geometry": {
       "type": "Point",
       "coordinates": [4.642618513690003, 51.479798990552204]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Waddinxveen",
+      "code": "0627"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.640707314224976, 52.04239409981016]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "gemeentenaam": "Breda",
+      "code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
     }
   }, {
     "type": "Feature",
@@ -3969,7 +4569,7 @@ module.exports = {
       "gml_id": "idb755d8a1-afde-4052-8f03-ca9eea33cf43",
       "Code": "0363",
       "Gemeentenaam": "Amsterdam",
-      "aantal": 6
+      "aantal": 8
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4005,7 +4605,7 @@ module.exports = {
       "gml_id": "id78649605-668d-4a6f-b406-191369d84da6",
       "Code": "0796",
       "Gemeentenaam": "'s-Hertogenbosch",
-      "aantal": 3
+      "aantal": 4
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4017,7 +4617,7 @@ module.exports = {
       "gml_id": "id9e12be5e-2496-4b23-aa3d-7d13845b18ff",
       "Code": "1894",
       "Gemeentenaam": "Peel en Maas",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4149,7 +4749,7 @@ module.exports = {
       "gml_id": "idff11e321-9d92-4032-8bd8-9e17127979d6",
       "Code": "0820",
       "Gemeentenaam": "Nuenen, Gerwen en Nederwetten",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4293,7 +4893,7 @@ module.exports = {
       "gml_id": "ide1d527d8-a869-419c-94bb-f6f1f084fe56",
       "Code": "0441",
       "Gemeentenaam": "Schagen",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4329,7 +4929,7 @@ module.exports = {
       "gml_id": "id1a790aa3-0667-4af0-a5aa-872b5725585b",
       "Code": "0856",
       "Gemeentenaam": "Uden",
-      "aantal": 12
+      "aantal": 13
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4353,7 +4953,7 @@ module.exports = {
       "gml_id": "id2cf5a790-def4-416f-ae17-b2b8548663bd",
       "Code": "0935",
       "Gemeentenaam": "Maastricht",
-      "aantal": 6
+      "aantal": 7
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4605,7 +5205,7 @@ module.exports = {
       "gml_id": "id44a8e10a-416d-45ba-b1ba-f6fe3b2d1326",
       "Code": "0233",
       "Gemeentenaam": "Ermelo",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4617,7 +5217,7 @@ module.exports = {
       "gml_id": "ida0e7ae6f-7ad7-408d-bc91-d6efe2f59684",
       "Code": "0086",
       "Gemeentenaam": "Opsterland",
-      "aantal": 0
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4761,7 +5361,7 @@ module.exports = {
       "gml_id": "idd7d4d101-e87b-4947-adad-5e8270c2ed69",
       "Code": "0855",
       "Gemeentenaam": "Tilburg",
-      "aantal": 27
+      "aantal": 29
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4773,7 +5373,7 @@ module.exports = {
       "gml_id": "id7daf0dab-8a37-4f72-bf6a-ac7ca300487f",
       "Code": "0546",
       "Gemeentenaam": "Leiden",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4785,7 +5385,7 @@ module.exports = {
       "gml_id": "id44168add-0860-48af-b661-f164e59b3c28",
       "Code": "1948",
       "Gemeentenaam": "Meierijstad",
-      "aantal": 10
+      "aantal": 11
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4821,7 +5421,7 @@ module.exports = {
       "gml_id": "id01c8e7d5-85eb-43bb-8e6b-b7593aa3eab9",
       "Code": "0777",
       "Gemeentenaam": "Etten-Leur",
-      "aantal": 1
+      "aantal": 3
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4845,7 +5445,7 @@ module.exports = {
       "gml_id": "idf0ed6812-d544-4054-b8a8-cfb39b64678d",
       "Code": "0755",
       "Gemeentenaam": "Boekel",
-      "aantal": 1
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4869,7 +5469,7 @@ module.exports = {
       "gml_id": "id45b37665-9a5a-41fd-bf5a-e5283326fd92",
       "Code": "0109",
       "Gemeentenaam": "Coevorden",
-      "aantal": 9
+      "aantal": 11
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -4989,7 +5589,7 @@ module.exports = {
       "gml_id": "id394b2671-e308-4494-a312-396a2d761050",
       "Code": "0794",
       "Gemeentenaam": "Helmond",
-      "aantal": 7
+      "aantal": 11
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5037,7 +5637,7 @@ module.exports = {
       "gml_id": "idbf46f9d0-d40a-4a8f-9d8c-f6200c9500bb",
       "Code": "1652",
       "Gemeentenaam": "Gemert-Bakel",
-      "aantal": 1
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5097,7 +5697,7 @@ module.exports = {
       "gml_id": "iddd92d325-8f06-4b4e-90be-2b98463c14df",
       "Code": "1916",
       "Gemeentenaam": "Leidschendam-Voorburg",
-      "aantal": 1
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5157,7 +5757,7 @@ module.exports = {
       "gml_id": "id81754328-8a05-4228-baba-04f9e7c0e904",
       "Code": "0599",
       "Gemeentenaam": "Rotterdam",
-      "aantal": 14
+      "aantal": 15
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5373,7 +5973,7 @@ module.exports = {
       "gml_id": "idc46a1aef-41e5-4599-af74-e21747808f2a",
       "Code": "1954",
       "Gemeentenaam": "Beekdaelen",
-      "aantal": 4
+      "aantal": 5
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5457,7 +6057,7 @@ module.exports = {
       "gml_id": "id815174e5-bcab-4dc7-910c-7d985212c604",
       "Code": "1640",
       "Gemeentenaam": "Leudal",
-      "aantal": 1
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5601,7 +6201,7 @@ module.exports = {
       "gml_id": "id04a42dd0-ede8-41d5-ba95-680677c2695a",
       "Code": "0344",
       "Gemeentenaam": "Utrecht",
-      "aantal": 13
+      "aantal": 14
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5637,7 +6237,7 @@ module.exports = {
       "gml_id": "id9275856a-7a70-4cb1-b9ea-1bfdb5845e0a",
       "Code": "1945",
       "Gemeentenaam": "Berg en Dal",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5721,7 +6321,7 @@ module.exports = {
       "gml_id": "id85f783cc-109c-4f04-bc8c-b42bf8a43458",
       "Code": "0518",
       "Gemeentenaam": "'s-Gravenhage",
-      "aantal": 2
+      "aantal": 3
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5745,7 +6345,7 @@ module.exports = {
       "gml_id": "ided0d6de5-6c98-4da3-83a4-edfdaeefd9a3",
       "Code": "1926",
       "Gemeentenaam": "Pijnacker-Nootdorp",
-      "aantal": 2
+      "aantal": 4
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -5985,7 +6585,7 @@ module.exports = {
       "gml_id": "id8bc2f996-8142-45ad-b6c6-d9e1b60c5039",
       "Code": "0664",
       "Gemeentenaam": "Goes",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -6189,7 +6789,7 @@ module.exports = {
       "gml_id": "id25f3f815-9582-4067-83fd-cb9aa62a93f4",
       "Code": "0513",
       "Gemeentenaam": "Gouda",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -6213,7 +6813,7 @@ module.exports = {
       "gml_id": "id5f2683f6-b545-4985-9f7d-e9e5f29cda2b",
       "Code": "0355",
       "Gemeentenaam": "Zeist",
-      "aantal": 1
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -6225,7 +6825,7 @@ module.exports = {
       "gml_id": "id8e8cab12-094c-49c4-9472-7d24c44c9cb8",
       "Code": "0392",
       "Gemeentenaam": "Haarlem",
-      "aantal": 2
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -6969,7 +7569,7 @@ module.exports = {
       "gml_id": "idf6e09409-dd19-411e-9522-727e42704761",
       "Code": "0384",
       "Gemeentenaam": "Diemen",
-      "aantal": 0
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7185,7 +7785,7 @@ module.exports = {
       "gml_id": "id594a3079-3336-483e-96b4-b0190bff80bf",
       "Code": "1621",
       "Gemeentenaam": "Lansingerland",
-      "aantal": 3
+      "aantal": 4
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7197,7 +7797,7 @@ module.exports = {
       "gml_id": "ideda38b09-5a58-42db-8a9a-e945a36c3cbe",
       "Code": "1883",
       "Gemeentenaam": "Sittard-Geleen",
-      "aantal": 8
+      "aantal": 13
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7221,7 +7821,7 @@ module.exports = {
       "gml_id": "iddcfbb860-aeea-4297-bbe9-d46dee592cb1",
       "Code": "0772",
       "Gemeentenaam": "Eindhoven",
-      "aantal": 7
+      "aantal": 8
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7509,7 +8109,7 @@ module.exports = {
       "gml_id": "idb40c1ab9-fe6c-46b3-8dc5-3b9e6c7ba5a4",
       "Code": "0523",
       "Gemeentenaam": "Hardinxveld-Giessendam",
-      "aantal": 4
+      "aantal": 5
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7533,7 +8133,7 @@ module.exports = {
       "gml_id": "id2dde58ed-11e2-4223-a7d7-a0f1783063f2",
       "Code": "0275",
       "Gemeentenaam": "Rheden",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7617,7 +8217,7 @@ module.exports = {
       "gml_id": "id5a7c7a1a-cb77-489c-b38d-f408860256b8",
       "Code": "0358",
       "Gemeentenaam": "Aalsmeer",
-      "aantal": 0
+      "aantal": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -7941,7 +8541,7 @@ module.exports = {
       "gml_id": "id936c1c76-c3e7-4799-a4e6-223f387c6f55",
       "Code": "0342",
       "Gemeentenaam": "Soest",
-      "aantal": 7
+      "aantal": 8
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -8109,7 +8709,7 @@ module.exports = {
       "gml_id": "idb756bac8-4c5f-41e6-9695-66e49adf247a",
       "Code": "0361",
       "Gemeentenaam": "Alkmaar",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -8133,7 +8733,7 @@ module.exports = {
       "gml_id": "id60edc2e2-7157-4d4f-928e-379a08fde6a3",
       "Code": "0627",
       "Gemeentenaam": "Waddinxveen",
-      "aantal": 0
+      "aantal": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -8145,7 +8745,7 @@ module.exports = {
       "gml_id": "id5c90b0ee-1b88-4eab-a578-c74a4d43cbc4",
       "Code": "0758",
       "Gemeentenaam": "Breda",
-      "aantal": 19
+      "aantal": 27
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -8225,6 +8825,3923 @@ module.exports = {
     }
   }]
 };
+},{}],"data/gemeenten_simplified_point.json":[function(require,module,exports) {
+module.exports = {
+  "type": "FeatureCollection",
+  "name": "gemeenten_points",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "aantal": 8,
+      "Gemeentenaam": "Amsterdam",
+      "Code": "0363"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.90454395880494, 52.373442677628717]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Geertruidenberg",
+      "Code": "0779"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.88158337199161, 51.697143600636316]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heemskerk",
+      "Code": "0396"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.64044928909771, 52.512492524601974]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "'s-Hertogenbosch",
+      "Code": "0796"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.351926203101234, 51.716809335548959]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Peel en Maas",
+      "Code": "1894"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.994849855915939, 51.336302164452071]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Oegstgeest",
+      "Code": "0579"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.471210594887227, 52.185552707634905]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nijkerk",
+      "Code": "0267"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.484362917358097, 52.212126363097006]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bodegraven-Reeuwijk",
+      "Code": "1901"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.766091074323391, 52.065412808993806]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heeze-Leende",
+      "Code": "1658"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.56723852282126, 51.360863481099727]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Haaren",
+      "Code": "0788"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.218108455890217, 51.626050929371893]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Groningen",
+      "Code": "0014"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.620634809658277, 53.218592260959646]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Waalwijk",
+      "Code": "0867"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.011821611903081, 51.692320087269813]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Deurne",
+      "Code": "0762"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.826976348479612, 51.4362205073908]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Vijfheerenlanden",
+      "Code": "1961"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.056755337983452, 51.935983842921189]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Waadhoeke",
+      "Code": "1949"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.613048374038535, 53.231545360049452]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Nuenen, Gerwen en Nederwetten",
+      "Code": "0820"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.549464210239438, 51.478601888624056]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 6,
+      "Gemeentenaam": "De Bilt",
+      "Code": "0310"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.17431250414956, 52.141732600522673]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nieuwkoop",
+      "Code": "0569"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.779469201234662, 52.170786468193391]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Bernheze",
+      "Code": "1721"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.520664325742123, 51.684682607348954]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Krimpen aan den IJssel",
+      "Code": "0542"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.602101929539664, 51.914696945700719]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Duiven",
+      "Code": "0226"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.018171519013842, 51.946548477396952]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Roerdalen",
+      "Code": "1669"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.041090110831822, 51.145697732245424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Waterland",
+      "Code": "0852"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.063246898651594, 52.448963994456228]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Texel",
+      "Code": "0448"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.873788943095948, 53.07911778080868]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Son en Breugel",
+      "Code": "0848"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.482465263068547, 51.516375757998034]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Borger-Odoorn",
+      "Code": "1681"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.871982432242024, 52.905881848166658]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "De Wolden",
+      "Code": "1690"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.37349561826344, 52.701666849120556]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Schagen",
+      "Code": "0441"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.742217472260063, 52.78732555746047]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hardenberg",
+      "Code": "0160"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.574135703986034, 52.585640974372801]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Velsen",
+      "Code": "0453"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.613525378204854, 52.452935191708072]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 13,
+      "Gemeentenaam": "Uden",
+      "Code": "0856"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.65184538449909, 51.655489641462964]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Gulpen-Wittem",
+      "Code": "1729"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.900143711214945, 50.802343490773488]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 7,
+      "Gemeentenaam": "Maastricht",
+      "Code": "0935"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.699530381059366, 50.852967145591229]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Delft",
+      "Code": "0503"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.363105691737761, 51.998456723101199]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Brummen",
+      "Code": "0213"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.118504289659141, 52.108973096680444]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nissewaard",
+      "Code": "1930"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.282054492779436, 51.831714340276086]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Mook en Middelaar",
+      "Code": "0944"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.899665063698928, 51.747365514469188]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Meppel",
+      "Code": "0119"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.193840336421433, 52.715930885887758]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Best",
+      "Code": "0753"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.396467315360838, 51.51365335484379]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Vlissingen",
+      "Code": "0718"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.481049767830864, 51.465330573752752]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Eemnes",
+      "Code": "0317"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.282678293522213, 52.251893968894755]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hendrik-Ido-Ambacht",
+      "Code": "0531"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.638790519027358, 51.841794583547845]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heerhugowaard",
+      "Code": "0398"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.844585601535098, 52.676005740400569]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Borsele",
+      "Code": "0654"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.82504762575722, 51.432045757807991]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 13,
+      "Gemeentenaam": "Houten",
+      "Code": "0321"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.181715330381173, 52.004095129909409]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Leusden",
+      "Code": "0327"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.416445381763757, 52.122223912522422]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zwijndrecht",
+      "Code": "0642"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.605802173051322, 51.821843885991818]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Aalten",
+      "Code": "0197"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.560587200898158, 51.92174059448854]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Reimerswaal",
+      "Code": "0703"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.120827690677719, 51.44147310997117]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Deventer",
+      "Code": "0150"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.235809635414007, 52.268236000426938]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Maasdriel",
+      "Code": "0263"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.296924502350473, 51.776250815239109]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Woudenberg",
+      "Code": "0351"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.426639229778666, 52.081156556266848]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Landgraaf",
+      "Code": "0882"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.032985846086819, 50.906429075118623]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Ermelo",
+      "Code": "0233"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.666163787726602, 52.28824770441242]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Opsterland",
+      "Code": "0086"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.112756773170934, 53.049150451140932]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Sluis",
+      "Code": "1714"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.523103445059406, 51.333413920978131]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Alphen aan den Rijn",
+      "Code": "0484"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.640959773515626, 52.113321712474807]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hoogeveen",
+      "Code": "0118"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.513593097183025, 52.723094096165497]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Heusden",
+      "Code": "0797"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.160190885949772, 51.696761985006397]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Veendam",
+      "Code": "0047"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.880092320784318, 53.088984998016315]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Cranendonck",
+      "Code": "1706"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.596178902581873, 51.286278976937538]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Dinkelland",
+      "Code": "1774"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.914139080020418, 52.373010504524636]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Waalre",
+      "Code": "0866"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.464870191258435, 51.387291811033244]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Leiderdorp",
+      "Code": "0547"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.542012374277071, 52.156651790947535]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Reusel-De Mierden",
+      "Code": "1667"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.147753153568498, 51.378255327757365]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Veldhoven",
+      "Code": "0861"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.383214388357032, 51.411856536819357]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 29,
+      "Gemeentenaam": "Tilburg",
+      "Code": "0855"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.068324449040283, 51.580026772464493]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Leiden",
+      "Code": "0546"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.485115575053258, 52.154982454473405]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 11,
+      "Gemeentenaam": "Meierijstad",
+      "Code": "1948"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.506397041370766, 51.592236704841945]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Weert",
+      "Code": "0988"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.691696158385813, 51.233605054750512]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Gooise Meren",
+      "Code": "1942"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.123323554622014, 52.317949049208067]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Etten-Leur",
+      "Code": "0777"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.644966209814083, 51.578315087652847]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Rhenen",
+      "Code": "0340"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.560529986553095, 51.980767402097342]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Boekel",
+      "Code": "0755"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.693726026678925, 51.60667429194234]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Gilze en Rijen",
+      "Code": "0784"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.918575064478993, 51.559585772592413]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 11,
+      "Gemeentenaam": "Coevorden",
+      "Code": "0109"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.735911695668312, 52.740255478531068]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Simpelveld",
+      "Code": "0965"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.986644901041596, 50.828804080500099]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Tubbergen",
+      "Code": "0183"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.776671355139665, 52.41058180413814]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heerenveen",
+      "Code": "0074"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.978001810781759, 52.99599109836975]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Amersfoort",
+      "Code": "0307"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.384696284546341, 52.173649810634728]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hilversum",
+      "Code": "0402"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.167948172230324, 52.223261267406158]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "Altena",
+      "Code": "1959"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.945931477173863, 51.76566263880094]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Laarbeek",
+      "Code": "1659"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.611772423008885, 51.530922363204212]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heiloo",
+      "Code": "0399"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.708573243252069, 52.599853344294644]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oldebroek",
+      "Code": "0269"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.937142879305774, 52.456940921986984]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 11,
+      "Gemeentenaam": "Helmond",
+      "Code": "0794"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.656969875541203, 51.476151225287424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Terschelling",
+      "Code": "0093"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.374776399419601, 53.339851239340206]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Stede Broec",
+      "Code": "0532"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.226851058031864, 52.700068452508106]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Twenterand",
+      "Code": "1700"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.598081156591749, 52.447889239977172]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Gemert-Bakel",
+      "Code": "1652"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.75429070684962, 51.540748398763633]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zoetermeer",
+      "Code": "0637"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.489773882170918, 52.060910359968211]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Echt-Susteren",
+      "Code": "1711"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.908201033641164, 51.085042217903464]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Harlingen",
+      "Code": "0072"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.267596151906939, 53.143094698473547]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Opmeer",
+      "Code": "0432"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.953473745118389, 52.715280206220143]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Leidschendam-Voorburg",
+      "Code": "1916"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.422294385192383, 52.090330507717098]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Leeuwarden",
+      "Code": "0080"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.797582825362091, 53.169957625310325]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Borne",
+      "Code": "0147"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.743564384977534, 52.312330673437714]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Ommen",
+      "Code": "0175"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.43476196457098, 52.516129940650778]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Dronten",
+      "Code": "0303"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.695353414481475, 52.510009935958145]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 15,
+      "Gemeentenaam": "Rotterdam",
+      "Code": "0599"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.276879581949601, 51.931017743854092]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Horst aan de Maas",
+      "Code": "1507"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.041639568832664, 51.444865800622928]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Landerd",
+      "Code": "1685"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.658960763271454, 51.716649529545606]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Lelystad",
+      "Code": "0995"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.374764558253661, 52.542725493350197]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 7,
+      "Gemeentenaam": "Loon op Zand",
+      "Code": "0809"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.047540126202141, 51.640569515600802]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Barneveld",
+      "Code": "0203"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.64185434931618, 52.168299437654525]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Papendrecht",
+      "Code": "0590"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.703344072358123, 51.833237766647528]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Wassenaar",
+      "Code": "0629"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.367051997038716, 52.141061139210329]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oldambt",
+      "Code": "1895"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.07466761222376, 53.212347017272265]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Oss",
+      "Code": "0828"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.526401416074795, 51.781568289806927]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bladel",
+      "Code": "1728"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.238735089142977, 51.372288298038185]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Westerkwartier",
+      "Code": "1969"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.338029239920976, 53.218506243440807]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Baarn",
+      "Code": "0308"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.264141660024944, 52.203833967836381]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Langedijk",
+      "Code": "0416"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.789430508980836, 52.691235781634283]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Kapelle",
+      "Code": "0678"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.970451158710956, 51.494980110333685]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Epe",
+      "Code": "0232"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.954968025319793, 52.325510041660969]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Midden-Delfland",
+      "Code": "1842"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.306142883895773, 51.964753222473412]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Stadskanaal",
+      "Code": "0037"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.010328313987024, 53.002152923483209]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Beekdaelen",
+      "Code": "1954"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.897121163156082, 50.936725873227708]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Steenwijkerland",
+      "Code": "1708"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.029990815010864, 52.755545145379592]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zandvoort",
+      "Code": "0473"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.535737021931089, 52.359985594990604]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Appingedam",
+      "Code": "0003"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.849567723581062, 53.317143222423766]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Weesp",
+      "Code": "0457"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.058043447541206, 52.303205186181209]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Aa en Hunze",
+      "Code": "1680"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.72726225525046, 52.992997439057405]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Wijchen",
+      "Code": "0296"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.70191345328336, 51.816735036161013]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Leudal",
+      "Code": "1640"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.884817157395882, 51.239442870211988]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Harderwijk",
+      "Code": "0243"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.644151798625869, 52.34132254197646]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Maasgouw",
+      "Code": "1641"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.882385449256429, 51.161571337467791]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Neder-Betuwe",
+      "Code": "1740"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.586867198080381, 51.915883777932933]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hoorn",
+      "Code": "0405"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.071936493160566, 52.629926340213338]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Dongen",
+      "Code": "0766"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.955449509995915, 51.635884398773747]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hellevoetsluis",
+      "Code": "0530"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.139867597357819, 51.833765993175135]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Westerveld",
+      "Code": "1701"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.295526706319519, 52.838192471189423]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Huizen",
+      "Code": "0406"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.242063974589224, 52.298646902865769]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Midden-Drenthe",
+      "Code": "1731"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.54275990552748, 52.867359348343108]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bergeijk",
+      "Code": "1724"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.34000163208764, 51.310141207611416]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Voorst",
+      "Code": "0285"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.099116537129384, 52.225567742071846]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 14,
+      "Gemeentenaam": "Utrecht",
+      "Code": "0344"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.07475437190386, 52.091137978719885]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heerde",
+      "Code": "0246"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.050329749650095, 52.406058304371484]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Drimmelen",
+      "Code": "1719"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.758752195242615, 51.700149605841084]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Berg en Dal",
+      "Code": "1945"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.94981033591922, 51.819949292811977]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "De Fryske Marren",
+      "Code": "1940"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.670654735931977, 52.89202770060438]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Schiermonnikoog",
+      "Code": "0088"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.218232685353355, 53.473682623892451]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Noardeast-Fryslân",
+      "Code": "1970"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.004141916772014, 53.351930160477302]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Olst-Wijhe",
+      "Code": "1773"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.15334566858722, 52.366782354198207]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Maassluis",
+      "Code": "0556"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.248866602730079, 51.925198930587648]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Hellendoorn",
+      "Code": "0163"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.450860160537849, 52.386367528933327]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "'s-Gravenhage",
+      "Code": "0518"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.293009674594854, 52.07207116871971]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Barendrecht",
+      "Code": "0489"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.525438010440117, 51.851065562935624]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "Pijnacker-Nootdorp",
+      "Code": "1926"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.42195366598497, 52.017529980101294]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Roermond",
+      "Code": "0957"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.011476738027607, 51.201190112980946]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Laren",
+      "Code": "0417"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.217074174306538, 52.247180465999364]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Beesel",
+      "Code": "0889"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.068957216237384, 51.269166248412077]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Tynaarlo",
+      "Code": "1730"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.604371503013877, 53.097108185975678]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Utrechtse Heuvelrug",
+      "Code": "1581"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.388321410888151, 52.034714526870836]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Urk",
+      "Code": "0184"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.481597871258026, 52.69314676637461]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Bronckhorst",
+      "Code": "1876"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.302955155031611, 52.045231667151185]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Achtkarspelen",
+      "Code": "0059"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.143134520190524, 53.216669517423128]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Midden-Groningen",
+      "Code": "1952"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.807444744109738, 53.195333379847945]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hollands Kroon",
+      "Code": "1911"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.992743972979924, 52.88571600120715]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Koggenland",
+      "Code": "1598"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.948846953686202, 52.644455741950047]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Ede",
+      "Code": "0228"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.727999285852192, 52.076430202158633]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Katwijk",
+      "Code": "0537"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.41629110979926, 52.192301282505362]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Alblasserdam",
+      "Code": "0482"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.665728969624737, 51.864654027516927]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Culemborg",
+      "Code": "0216"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.210380409299452, 51.945777865819473]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Sint-Michielsgestel",
+      "Code": "0845"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.378121616947739, 51.657068477221358]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Brunssum",
+      "Code": "0899"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.978000943717602, 50.942942146838874]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Woerden",
+      "Code": "0632"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.898899336379786, 52.10693981365732]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Medemblik",
+      "Code": "0420"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.144038971376609, 52.770183609624162]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Goes",
+      "Code": "0664"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.844391430335104, 51.517107179692943]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Loppersum",
+      "Code": "0024"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.728132670708963, 53.340695878061979]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Noordwijk",
+      "Code": "0575"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.476189653801145, 52.271145113046643]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Wageningen",
+      "Code": "0289"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.663510190046946, 51.973475938262411]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Venray",
+      "Code": "0984"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.962884412563724, 51.515367654175506]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "West Maas en Waal",
+      "Code": "0668"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.496593282993622, 51.851629488730602]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Krimpenerwaard",
+      "Code": "1931"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.737182026313357, 51.952389596190493]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Alphen-Chaam",
+      "Code": "1723"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.887360581815537, 51.501381405717936]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Westland",
+      "Code": "1783"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.211064178352926, 52.000698053711503]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Westerwolde",
+      "Code": "1950"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.120185795749543, 53.014001125839393]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Edam-Volendam",
+      "Code": "0385"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.031199230125851, 52.543832262039452]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Mill en Sint Hubert",
+      "Code": "0815"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.768048860951114, 51.685839244291863]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Pekela",
+      "Code": "0765"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.972945278918539, 53.070587628392161]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bunnik",
+      "Code": "0312"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.216943996308571, 52.040915676135882]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oudewater",
+      "Code": "0589"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.864239204210567, 52.027455007596807]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Staphorst",
+      "Code": "0180"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.20708163160102, 52.633506928142687]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Hoeksche Waard",
+      "Code": "1963"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.448705090934322, 51.76456718796252]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Gouda",
+      "Code": "0513"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.706203762558125, 52.015301504988287]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Doesburg",
+      "Code": "0221"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.14690016541774, 52.018671919977287]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Zeist",
+      "Code": "0355"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.255185646638755, 52.101965223337587]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Haarlem",
+      "Code": "0392"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.647530502365609, 52.383408082211389]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Heemstede",
+      "Code": "0397"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.615360353591372, 52.344779750571846]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Stichtse Vecht",
+      "Code": "1904"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.012587202287017, 52.176948243166869]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Dordrecht",
+      "Code": "0505"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.708874373855243, 51.78150729411221]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Enschede",
+      "Code": "0153"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.877788184144817, 52.220806989719797]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Lisse",
+      "Code": "0553"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.545837256660857, 52.255551662389927]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Ooststellingwerf",
+      "Code": "0085"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.282968547988934, 52.98236915040507]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hulst",
+      "Code": "0677"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.064973100021845, 51.333249243199681]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Meerssen",
+      "Code": "0938"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.756417876603613, 50.901345468782935]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zevenaar",
+      "Code": "0299"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.085234588451082, 51.924102900575157]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hilvarenbeek",
+      "Code": "0798"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.145456120713018, 51.479524636702457]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zuidplas",
+      "Code": "1892"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.607071577149099, 51.998877423511814]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Vlieland",
+      "Code": "0096"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.034649995382112, 53.219694290531073]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Rijssen-Holten",
+      "Code": "1742"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.433968718577581, 52.291429798115573]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Losser",
+      "Code": "0168"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.002747972551771, 52.302809609029602]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Terneuzen",
+      "Code": "0715"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.836235827181643, 51.301644741888666]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Noord-Beveland",
+      "Code": "1695"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.796440954357604, 51.573244434522614]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Almelo",
+      "Code": "0141"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.65819561961092, 52.347890620200623]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Goeree-Overflakkee",
+      "Code": "1924"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.099988712065111, 51.752268129567987]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Brielle",
+      "Code": "0501"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.184484262663518, 51.88868950180558]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Ridderkerk",
+      "Code": "0597"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.596108373761555, 51.868794408879118]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Delfzijl",
+      "Code": "0010"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.951248771871459, 53.332200325147028]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Gorinchem",
+      "Code": "0512"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.97708281735955, 51.83846016830114]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Het Hogeland",
+      "Code": "1966"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.537346030446621, 53.428580510180574]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oude IJsselstreek",
+      "Code": "1509"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.40949604049581, 51.907824843779032]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Noordoostpolder",
+      "Code": "0171"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.729791476018474, 52.716004193721048]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Apeldoorn",
+      "Code": "0200"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.921909194301191, 52.189858128337484]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Veere",
+      "Code": "0717"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.584637712627326, 51.562599972555184]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Stein",
+      "Code": "0971"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.763666615031629, 50.96899189655084]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Geldrop-Mierlo",
+      "Code": "1771"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.587560408519337, 51.431274703832528]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Uitgeest",
+      "Code": "0450"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.728607967721255, 52.523428085539187]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Smallingerland",
+      "Code": "0090"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.038929802634367, 53.11342271007971]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Albrandswaard",
+      "Code": "0613"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.435715056837845, 51.852042929339596]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Vlaardingen",
+      "Code": "0622"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.327858942195908, 51.917387481873128]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Sint Anthonis",
+      "Code": "1702"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.84199877565081, 51.617311700750037]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Noordenveld",
+      "Code": "1699"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.440307478035204, 53.095624819196011]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Beuningen",
+      "Code": "0209"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.740275637807039, 51.862815385512704]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oirschot",
+      "Code": "0823"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.289780493121386, 51.492613987586907]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oldenzaal",
+      "Code": "0173"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.911043321458912, 52.307725821535293]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "Goirle",
+      "Code": "0785"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.03307007009464, 51.512274570838812]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Zaanstad",
+      "Code": "0479"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.773012668286436, 52.462908898106235]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Capelle aan den IJssel",
+      "Code": "0502"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.580137762836896, 51.934929001211401]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nieuwegein",
+      "Code": "0356"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.094671637788437, 52.030817518742424]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Berkelland",
+      "Code": "1859"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.570725560728298, 52.100924142791939]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Cuijk",
+      "Code": "1684"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.851373203207668, 51.718299359354759]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Middelburg",
+      "Code": "0687"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.650836115142095, 51.503158355318028]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Lopik",
+      "Code": "0331"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.945522924276293, 51.985358119426294]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Landsmeer",
+      "Code": "0415"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.924555612945205, 52.450583111229797]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Woensdrecht",
+      "Code": "0873"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.342270718943828, 51.408289904600529]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bergen (L)",
+      "Code": "0893"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.089381942483768, 51.591908022107027]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Rozendaal",
+      "Code": "0277"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.967893061442719, 52.042537538274182]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hattem",
+      "Code": "0244"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.053263249647022, 52.474779644009715]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Westervoort",
+      "Code": "0293"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.970718338144098, 51.957518228985542]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oosterhout",
+      "Code": "0826"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.864068047961516, 51.637773799710814]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Blaricum",
+      "Code": "0376"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.274231432714287, 52.282958937667267]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Sliedrecht",
+      "Code": "0610"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.772947672708265, 51.830686993208928]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Roosendaal",
+      "Code": "1674"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.424510690265395, 51.513191458990342]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Venlo",
+      "Code": "0983"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.15911190622785, 51.390954820764307]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Zeewolde",
+      "Code": "0050"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.455242011825033, 52.344361396045329]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Boxtel",
+      "Code": "0757"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.326581494973194, 51.578253983159655]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Rijswijk",
+      "Code": "0603"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.326015690060721, 52.036173779079277]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Enkhuizen",
+      "Code": "0388"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.303367733984083, 52.755191615008371]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Diemen",
+      "Code": "0384"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.990496523636653, 52.337332438023651]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Renswoude",
+      "Code": "0339"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.534162801149938, 52.068947428183193]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Tiel",
+      "Code": "0281"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.406860162226484, 51.885082361173033]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Voorschoten",
+      "Code": "0626"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.438628048715661, 52.124822179261272]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Den Helder",
+      "Code": "0400"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.785225473242436, 52.939975856083585]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Eersel",
+      "Code": "0770"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.314617722849111, 51.396490435035858]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Rucphen",
+      "Code": "0840"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.558562547771593, 51.522672746620344]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Winterswijk",
+      "Code": "0294"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.725861757005849, 51.969853923582811]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Ouder-Amstel",
+      "Code": "0437"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.913515600820424, 52.289376046323632]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Zaltbommel",
+      "Code": "0297"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.15844057161561, 51.792290699582246]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Ameland",
+      "Code": "0060"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.76137125560061, 53.430727945123529]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Castricum",
+      "Code": "0383"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.6753941516728, 52.556689772232566]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Vught",
+      "Code": "0865"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.268812414069878, 51.655584732893942]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Doetinchem",
+      "Code": "0222"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.286702172915927, 51.960787055065587]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Teylingen",
+      "Code": "1525"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.511900695171982, 52.21399744912879]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Grave",
+      "Code": "0786"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.743017715685791, 51.74357271749993]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Putten",
+      "Code": "0273"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.582671576316273, 52.243900089840729]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Kerkrade",
+      "Code": "0928"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.050973624842928, 50.87182570369432]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "Lansingerland",
+      "Code": "1621"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.506107290127652, 52.004008267325496]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 13,
+      "Gemeentenaam": "Sittard-Geleen",
+      "Code": "1883"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.8282044909993, 51.004858770846774]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Dantumadiel",
+      "Code": "1891"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.984521237766898, 53.2800456339574]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 8,
+      "Gemeentenaam": "Eindhoven",
+      "Code": "0772"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.458870799384706, 51.450022191775162]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Raalte",
+      "Code": "0177"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.279049620776866, 52.387826650967838]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heerlen",
+      "Code": "0917"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.969433919514539, 50.893323415096482]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Bergen op Zoom",
+      "Code": "0748"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.288303640707042, 51.503458364490143]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Druten",
+      "Code": "0225"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.612147800100503, 51.875011974669604]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Gennep",
+      "Code": "0907"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.987106062010538, 51.699274750038676]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Eijsden-Margraten",
+      "Code": "1903"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.773687374168117, 50.801062417962065]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bunschoten",
+      "Code": "0313"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.358120746244644, 52.242306270734595]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Montfoort",
+      "Code": "0335"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.944048054584255, 52.047708428737913]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Voerendaal",
+      "Code": "0986"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.916494289137879, 50.869365371943154]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Someren",
+      "Code": "0847"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.691425991029543, 51.378729189534027]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Heumen",
+      "Code": "0252"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.818482463348002, 51.77788922136552]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nederweert",
+      "Code": "0946"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.773321276384421, 51.294357615934459]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Wormerland",
+      "Code": "0880"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.85512997777405, 52.502000404004782]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Tholen",
+      "Code": "0716"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.106353645385274, 51.570391858870181]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Dalfsen",
+      "Code": "0148"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.276669382489187, 52.514727835180949]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hof van Twente",
+      "Code": "1735"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.589959053085501, 52.236441307500257]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Buren",
+      "Code": "0214"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.403627465320481, 51.938336348937604]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Overbetuwe",
+      "Code": "1734"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.778330214465289, 51.924303295934571]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "West Betuwe",
+      "Code": "1960"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.209350618335098, 51.861601539836215]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "De Ronde Venen",
+      "Code": "0736"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.917283726072625, 52.226334745411869]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Valkenburg aan de Geul",
+      "Code": "0994"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.82387076857141, 50.860710623549018]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Súdwest-Fryslân",
+      "Code": "1900"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.461271915272558, 52.997860905886562]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Steenbergen",
+      "Code": "0851"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.323627009925142, 51.599888544426456]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Hardinxveld-Giessendam",
+      "Code": "0523"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.852424178489662, 51.832614685788862]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Amstelveen",
+      "Code": "0362"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.85148669610057, 52.289265956992494]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Rheden",
+      "Code": "0275"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.051251933775643, 52.033539993820177]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Westvoorne",
+      "Code": "0614"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.058623189749088, 51.8906774281472]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Haarlemmermeer",
+      "Code": "0394"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.68645609702088, 52.308079475068261]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Boxmeer",
+      "Code": "0756"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.949026396425401, 51.621512574626429]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Arnhem",
+      "Code": "0202"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.892592568683463, 52.001137213662339]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 4,
+      "Gemeentenaam": "Beverwijk",
+      "Code": "0375"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.649106198592863, 52.484808222913927]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Purmerend",
+      "Code": "0439"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.971138414769895, 52.502165056306595]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Aalsmeer",
+      "Code": "0358"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.755022704616899, 52.257696783919378]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Haaksbergen",
+      "Code": "0158"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.755864593222728, 52.155503420107344]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Assen",
+      "Code": "0106"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.552466311033505, 53.001272994046126]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Uithoorn",
+      "Code": "0451"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.790845985093636, 52.236908565721798]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Zwolle",
+      "Code": "0193"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.118363682684245, 52.518685657998496]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Weststellingwerf",
+      "Code": "0098"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.01768876061067, 52.875762621651745]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Drechterland",
+      "Code": "0498"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.173230721612978, 52.657135660624867]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oost Gelre",
+      "Code": "1586"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.575734531164599, 52.00983650229341]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Molenlanden",
+      "Code": "1978"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.8451901674889, 51.88467125141694]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Beek",
+      "Code": "0888"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.809102791706588, 50.930876731842076]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Vaals",
+      "Code": "0981"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.975847522302694, 50.774334915472366]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Baarle-Nassau",
+      "Code": "0744"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.893145401268612, 51.439016826013159]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Schiedam",
+      "Code": "0606"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.385262274413827, 51.926755981924352]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Wijdemeren",
+      "Code": "1696"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.084840448618139, 52.22617926061389]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Veenendaal",
+      "Code": "0345"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.555657145655329, 52.023677967602893]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zwartewaterland",
+      "Code": "1896"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.063714028414894, 52.602752581252432]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Beemster",
+      "Code": "0370"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.916882696457886, 52.557694414624457]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zutphen",
+      "Code": "0301"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.233950207336985, 52.13634665696592]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Nunspeet",
+      "Code": "0302"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.786246489841637, 52.339251193329034]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Valkenswaard",
+      "Code": "0858"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.449227126057419, 51.32375173520974]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Wierden",
+      "Code": "0189"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.56063192658229, 52.344439015605801]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hengelo (O)",
+      "Code": "0164"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.778194240272807, 52.254906159848524]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 5,
+      "Gemeentenaam": "Renkum",
+      "Code": "0274"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.784845458849348, 51.989619298868263]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Asten",
+      "Code": "0743"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.779234377946953, 51.386406796488217]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Kampen",
+      "Code": "0166"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.923326482977805, 52.558358355618722]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Halderberge",
+      "Code": "1655"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.523114368939973, 51.590540224979343]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Schouwen-Duiveland",
+      "Code": "1676"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [3.882837892157855, 51.682174704909194]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 8,
+      "Gemeentenaam": "Soest",
+      "Code": "0342"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.296288805459032, 52.156190812286091]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Zoeterwoude",
+      "Code": "0638"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.513832229794021, 52.114801720538516]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Oostzaan",
+      "Code": "0431"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.876109719181421, 52.451963537473858]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Tytsjerksteradiel",
+      "Code": "0737"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.962716583487735, 53.1998642779999]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 2,
+      "Gemeentenaam": "Lingewaard",
+      "Code": "1705"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.942228423465802, 51.901531251454422]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "IJsselstein",
+      "Code": "0353"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.028791050515309, 52.027712470410911]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Oisterwijk",
+      "Code": "0824"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.197526475016558, 51.552101449095524]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Elburg",
+      "Code": "0230"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.849034938091677, 52.413239506889767]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Scherpenzeel",
+      "Code": "0279"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.500490934819559, 52.089323394955841]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Montferland",
+      "Code": "1955"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.213778757079461, 51.916893324506134]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Moerdijk",
+      "Code": "1709"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.535476660853718, 51.662575882530433]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Emmen",
+      "Code": "0114"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.961960528128859, 52.74965273481061]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Bergen (NH)",
+      "Code": "0373"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.661386586001703, 52.663174404705138]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Kaag en Braassem",
+      "Code": "1884"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.629194088234511, 52.192581361828957]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Alkmaar",
+      "Code": "0361"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.803307611448407, 52.601791518750062]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Zundert",
+      "Code": "0879"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.642618513690003, 51.479798990552204]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Waddinxveen",
+      "Code": "0627"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.640707314224976, 52.04239409981016]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 27,
+      "Gemeentenaam": "Breda",
+      "Code": "0758"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.761441523771285, 51.585120498530195]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Hillegom",
+      "Code": "0534"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.576953173753752, 52.296772784978373]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Bloemendaal",
+      "Code": "0377"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [4.581535324875825, 52.385927790276355]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Wijk bij Duurstede",
+      "Code": "0352"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.325254052652819, 51.989201238963275]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 0,
+      "Gemeentenaam": "Lochem",
+      "Code": "0262"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.346854884107432, 52.179482472239769]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 1,
+      "Gemeentenaam": "Almere",
+      "Code": "0034"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.205651133163596, 52.402471265052704]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "aantal": 3,
+      "Gemeentenaam": "Nijmegen",
+      "Code": "0268"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [5.836792944233466, 51.838509283041823]
+    }
+  }]
+};
 },{}],"data/gemeenten_borders_simplified.json":[function(require,module,exports) {
 module.exports = {
   "type": "FeatureCollection",
@@ -8251,9 +12768,12 @@ module.exports = {
 };
 },{}],"updated.json":[function(require,module,exports) {
 module.exports = {
-  "date_data": "09-03-2020",
-  "url": "https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona09032020.csv"
+  "date_data": "11-03-2020",
+  "url": "https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona10032020_2.csv",
+  "total_infections": " 380"
 };
+},{}],"circle.svg":[function(require,module,exports) {
+module.exports = "/circle.7270b7c2.svg";
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -8277,11 +12797,15 @@ var _corona_markers = _interopRequireDefault(require("./data/corona_markers.json
 
 var _gemeenten_simplified = _interopRequireDefault(require("./data/gemeenten_simplified.json"));
 
+var _gemeenten_simplified_point = _interopRequireDefault(require("./data/gemeenten_simplified_point.json"));
+
 var _gemeenten_borders_simplified = _interopRequireDefault(require("./data/gemeenten_borders_simplified.json"));
 
 var _gemeenten_borders_outside = _interopRequireDefault(require("./data/gemeenten_borders_outside.json"));
 
 var _updated = _interopRequireDefault(require("./updated.json"));
+
+var _circle = _interopRequireDefault(require("./circle.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8292,7 +12816,7 @@ var map = L.map('mapid', {
   minZoom: 5,
   maxBounds: [[43.934028, -4.262695], [58.378797, 13.886719]]
 }).setView([52.505, 5], 8);
-var backgroundLayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/EPSG:3857/{z}/{x}/{y}.png', {
+var backgroundLayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartwater/EPSG:3857/{z}/{x}/{y}.png', {
   wmts: true,
   attribution: 'BRT-Achtergrondkaart: © <a href="http://www.kadaster.nl">Kadaster</a> (<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)</span>'
 });
@@ -8300,9 +12824,9 @@ var gemBordersLayer = L.geoJSON(_gemeenten_borders_simplified.default, {
   style: function style(feature) {
     return {
       fillColor: null,
-      weight: 0.5,
+      weight: 1,
       opacity: 1,
-      color: '#454f4e',
+      color: '#878787',
       dashArray: '4',
       fillOpacity: 0
     };
@@ -8324,9 +12848,9 @@ var gemBordersLayerOutside = L.geoJSON(_gemeenten_borders_outside.default, {
   style: function style(feature) {
     return {
       fillColor: null,
-      weight: 1,
+      weight: 2,
       opacity: 1,
-      color: 'darkgray',
+      color: '#878787',
       dashArray: '4',
       fillOpacity: 0
     };
@@ -8342,7 +12866,7 @@ var markers = L.markerClusterGroup({
     fillOpacity: 0.5
   },
   singleMarkerMode: true,
-  attribution: "<a href=\"".concat(_updated.default.url, "\">Data coronavirus besmettingen - ").concat(_updated.default.date_data, "</a>: <a href=\"https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19\">RIVM</a>")
+  attribution: "Data coronavirus besmettingen: <a href=\"https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19\">RIVM</a>"
 });
 var geojsonMarkers = L.geoJSON(_corona_markers.default);
 markers.addLayers(geojsonMarkers);
@@ -8356,7 +12880,110 @@ gemLayer.addTo(map); // events
 markers.on('click', function (a) {
   L.popup().setLatLng([a.layer._latlng.lat, a.layer._latlng.lng]).setContent('<p><b>Gemeente: </b>' + a.layer.feature.properties.gemeentenaam + '</p>').openOn(map);
 });
-},{"leaflet/dist/leaflet":"node_modules/leaflet/dist/leaflet.js","leaflet.control.layers.tree":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.js","leaflet.control.layers.tree/L.Control.Layers.Tree.css":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.css","leaflet.markercluster/dist/leaflet.markercluster":"node_modules/leaflet.markercluster/dist/leaflet.markercluster.js","./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css","./index.css":"index.css","./data/corona_markers.json":"data/corona_markers.json","./data/gemeenten_simplified.json":"data/gemeenten_simplified.json","./data/gemeenten_borders_simplified.json":"data/gemeenten_borders_simplified.json","./data/gemeenten_borders_outside.json":"data/gemeenten_borders_outside.json","./updated.json":"updated.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function getColor(value) {
+  var colors = ['#253494', '#2c7fb8', '#41b6c4', '#a1dab4', '#ffffcc'];
+  var breaks = [0.0, 1.0, 4.0, 9.0, 19.0, 27.0];
+  var color;
+
+  for (var i = 1; i < breaks.length; i++) {
+    if (i == 1) {
+      if (value > breaks[0] && value <= breaks[i]) {
+        color = colors[i - 1];
+        break;
+      }
+    } else {
+      if (value <= breaks[i]) {
+        color = colors[i - 1];
+        break;
+      }
+    }
+  }
+
+  return color;
+}
+
+function iconByStations(feature) {
+  if (feature.properties.aantal > 0) {
+    var calculatedSize = 8 + feature.properties.aantal * 3;
+    var CustomIcon = L.Icon.extend({
+      options: {
+        iconSize: [calculatedSize, calculatedSize],
+        iconAnchor: [calculatedSize / 3, calculatedSize / 2]
+      }
+    });
+    var color = getColor(feature.properties.aantal);
+    var achenSvgString = "<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='50' cy='50' r='40' stroke='darkgray' stroke-width='1' fill='".concat(color, "' /></svg>");
+    var myIconUrl = encodeURI("data:image/svg+xml," + achenSvgString).replace('#', '%23');
+    var rectIcon = new CustomIcon({
+      iconUrl: myIconUrl
+    });
+    return rectIcon;
+  }
+} // create the GeoJSON layer and call the styling function with each marker
+
+
+var metroLayer = L.geoJSON(_gemeenten_simplified_point.default, {
+  pointToLayer: function pointToLayer(feature, latlng) {
+    if (feature.properties.aantal > 0) {
+      return L.marker(latlng, {
+        icon: iconByStations(feature)
+      });
+    }
+  }
+}).bindPopup(function (layer) {
+  return '<p><b>Gemeente: </b>' + layer.feature.properties.Gemeentenaam + '</p>' + '<p><b>Aantal gevallen: </b>' + layer.feature.properties.aantal + '</p>';
+});
+
+function style(feature) {
+  var color = getColor(feature.properties.aantal);
+  if (feature.properties.aantal === 0) color = 'white';
+  return {
+    fillColor: color,
+    weight: 1,
+    opacity: 1,
+    color: 'darkgray',
+    dashArray: '3',
+    fillOpacity: 0.9
+  };
+}
+
+var gemChoropleth = L.geoJson(_gemeenten_simplified.default, {
+  style: style
+}).bindPopup(function (layer) {
+  return '<p><b>Gemeente: </b>' + layer.feature.properties.Gemeentenaam + '</p>' + '<p><b>Aantal gevallen: </b>' + layer.feature.properties.aantal + '</p>';
+});
+L.Control.Command = L.Control.extend({
+  options: {
+    position: 'topright'
+  },
+  onAdd: function onAdd(map) {
+    console.log(this);
+    var controlDiv = L.DomUtil.create('div', 'leaflet-control-command');
+    var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
+    controlUI.innerHTML = '<h1 style="margin-bottom:5px;">Corona Besmettingen in Nederland</h1>' + '<div class="legend-div"><div class="marker-cluster-small legend-item"></div>0-9 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-medium legend-item"></div>10-99 Besmettingen</div>' + '<div class="legend-div"><div class="marker-cluster-large legend-item"></div>>99 Besmettingen</div>' + '<button id="testButton">Click</button>' + "<p>Totaal aantal besmettingen: ".concat(_updated.default.total_infections, "&nbsp;&nbsp;|&nbsp;&nbsp;publicatie datum van de <a href=\"").concat(_updated.default.url, "\">data</a>: ").concat(_updated.default.date_data, "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"https://github.com/arbakker/corona-kaart\">broncode</a></p>");
+    return controlDiv;
+  }
+});
+
+L.control.command = function (options) {
+  return new L.Control.Command(options);
+};
+
+L.control.command({}).addTo(map);
+document.getElementById("testButton").addEventListener("click", function () {
+  if (map.hasLayer(metroLayer)) {
+    map.removeLayer(metroLayer);
+    map.addLayer(markers);
+  } else if (map.hasLayer(markers)) {
+    map.removeLayer(markers);
+    map.addLayer(gemChoropleth);
+  } else if (map.hasLayer(gemChoropleth)) {
+    map.removeLayer(gemChoropleth);
+    map.addLayer(metroLayer);
+  }
+});
+},{"leaflet/dist/leaflet":"node_modules/leaflet/dist/leaflet.js","leaflet.control.layers.tree":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.js","leaflet.control.layers.tree/L.Control.Layers.Tree.css":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.css","leaflet.markercluster/dist/leaflet.markercluster":"node_modules/leaflet.markercluster/dist/leaflet.markercluster.js","./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css","./index.css":"index.css","./data/corona_markers.json":"data/corona_markers.json","./data/gemeenten_simplified.json":"data/gemeenten_simplified.json","./data/gemeenten_simplified_point.json":"data/gemeenten_simplified_point.json","./data/gemeenten_borders_simplified.json":"data/gemeenten_borders_simplified.json","./data/gemeenten_borders_outside.json":"data/gemeenten_borders_outside.json","./updated.json":"updated.json","./circle.svg":"circle.svg"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -8384,7 +13011,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38311" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38499" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
