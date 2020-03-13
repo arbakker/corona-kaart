@@ -46299,7 +46299,7 @@ L.Control.Command = L.Control.extend({
   onAdd: function onAdd(map) {
     var controlDiv = L.DomUtil.create('div', 'leaflet-control-command');
     var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
-    controlUI.innerHTML = '<button style="display:inline;float:right;" id="btnAtt"><i class="fa fa-info"></i></button><div id="legendBody"><h1 class="full" style="margin-bottom:5px;">Corona Virus in Nederland</h1>' + '<div id="legend"></div><div id="radioDiv">' + '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' + '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Cirkel</label></div></div></div>' + "<p class=\"full\"><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>publicatie datum <a href=\"").concat(_updated.default.url, "\">data</a>:</b> ").concat(_updated.default.date_data, "</p>") + '</div>' + "<span class=\"mobile\" style=\"font-style:italic;font-size: 9px;position:absolute; right:5px;bottom:5px;\">peildatum: ".concat(_updated.default.date_data, "</span>");
+    controlUI.innerHTML = '<button style="display:inline;float:right;" id="btnAtt"><i class="fa fa-info"></i></button><div id="legendBody"><h1 class="full" style="margin-bottom:5px;">Corona Virus in Nederland</h1>' + '<div id="legend"></div><div id="radioDiv">' + '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' + '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Cirkel</label></div></div></div>' + "<p class=\"full\"><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ").concat(_updated.default.date_data, "</p>") + '</div>' + "<span class=\"mobile\" style=\"font-size: 9px;position:absolute; right:5px;bottom:5px;\"><b>peildatum: </b>".concat(_updated.default.date_data, "</span>");
     return controlDiv;
   }
 });
@@ -46402,7 +46402,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45445" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42209" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

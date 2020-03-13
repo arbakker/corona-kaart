@@ -961,6 +961,9 @@ svg{
 }
 .mobile{display: none;}
 @media only screen and (max-width: 600px) {
+    .leaflet-control-command{
+        bottom: 0px;
+    }
     .leaflet-control-command-interior{
         display: block;
     }
