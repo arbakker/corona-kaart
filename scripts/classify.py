@@ -60,13 +60,11 @@ def records(filename, layername, cols):
 
 @click.command()
 @click.argument('filename', type=click.Path(exists=True))
-@click.argument('nr-classes' type=int)
+@click.argument('nr-classes', type=int)
 @click.option('--layer')
 @click.option('--attribute')
 def cli(filename, nr_classes, layer, attribute):
     result = {}
-
-
     layers = ['buurten', 'wijken', 'gemeenten']
     if layer: 
         layers = [layer]
