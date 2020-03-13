@@ -995,7 +995,9 @@ svg{
     padding: unset;
     text-align: center;
     vertical-align: bottom;
-    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+
 }
 
 
