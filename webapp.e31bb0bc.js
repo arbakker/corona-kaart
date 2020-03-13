@@ -45684,14 +45684,21 @@ function getColor(value, breaks, colors) {
   return color;
 }
 
+function highlight(e, layer) {
+  selectedGemeente = layer.feature.properties.Code;
+  gemLayer.eachLayer(function (gLayer) {
+    gLayer.setStyle(getStyle(gLayer.feature.properties.Code));
+  });
+}
+
 function onEachFeature(feature, layer) {
   // bind click
   layer.on({
     mouseover: function mouseover(e) {
-      selectedGemeente = layer.feature.properties.Code;
-      gemLayer.eachLayer(function (gLayer) {
-        gLayer.setStyle(getStyle(gLayer.feature.properties.Code));
-      });
+      highlight(e, layer);
+    },
+    click: function click(e) {
+      highlight(e, layer);
     }
   });
 }
@@ -45767,7 +45774,7 @@ var map = L.map('mapid', {
   maxZoom: 18,
   minZoom: 5,
   maxBounds: [[43.934028, -4.262695], [58.378797, 13.886719]]
-}).setView([52.505, 5], 8);
+}).setView([52.505, 5], 7);
 L.control.attribution({
   prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>'
 }).addTo(map);
@@ -45960,7 +45967,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46239" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37811" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

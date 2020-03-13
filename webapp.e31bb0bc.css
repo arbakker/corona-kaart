@@ -805,7 +805,11 @@ body {
 }
 
 .leaflet-layer.dark {
-    filter:  grayscale() invert(85%) ;
+    -webkit-filter:  grayscale() invert(85%);
+    -ms-filter:  grayscale() invert(85%);
+    -o-filter:  grayscale() invert(85%);
+    -moz-filter:  grayscale() invert(85%);
+    filter:  grayscale() invert(85%);
 }
 
 .leaflet-layer.light {
