@@ -3,22 +3,30 @@
 @import url('./fonts/RobotoCondensed-Regular.ttf');
 @import url('./fonts/RobotoCondensed-BoldItalic.ttf'); */
 
+@import "./node_modules/font-awesome/css/font-awesome.min.css";
+@import './node_modules/pretty-checkbox/dist/pretty-checkbox.min.css';
 @font-face {
     font-family: "Roboto Condensed";
     src: url("./fonts/Roboto-Bold.ttf");
+    src: url("./fonts/Roboto-Italic.ttf");
     src: url("./fonts/Roboto-Regular.ttf");
 }
 
-
 #mapid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
     height: 100vh;
+    /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 body {
     margin: 0px;
 }
 
-*{
+* {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -90,7 +98,11 @@ body {
 }
 
 .leaflet-layer.dark {
-    filter:  grayscale() invert(85%) ;
+    -webkit-filter: grayscale(100%) invert(85%);
+    -ms-filter: grayscale(100%) invert(85%);
+    -o-filter: grayscale(100%) invert(85%);
+    -moz-filter: grayscale(100%) invert(85%);
+    filter: grayscale(100%) invert(85%);
 }
 
 .leaflet-layer.light {
@@ -106,82 +118,76 @@ body.dark, .leaflet-container.dark {
 }
 
 :root {
-    --class-1: rgba(254,235,226, 1);
+    --class-1: rgba(254, 235, 226, 1);
     --class-1-trans: rgba(254, 235, 226, 0.6);
-    --class-2: rgba(252,197,192, 1);
-    --class-2-trans: rgba(252,197,192, 0.6);
-    --class-3-trans: rgba(250,159,181, 0.6);
-    --class-3: rgba(250,159,181, 1);
-    --class-4-trans: rgba(247,104,161, 0.6);
-    --class-4: rgba(247,104,161, 1);
-    --class-5-trans: rgba(221,52,151, 0.6);
-    --class-5: rgba(221,52,151, 1);
-    --class-6-trans: rgba(174,1,126, 0.6);
-    --class-6: rgba(174,1,126, 1);
+    --class-2: rgba(252, 197, 192, 1);
+    --class-2-trans: rgba(252, 197, 192, 0.6);
+    --class-3-trans: rgba(250, 159, 181, 0.6);
+    --class-3: rgba(250, 159, 181, 1);
+    --class-4-trans: rgba(247, 104, 161, 0.6);
+    --class-4: rgba(247, 104, 161, 1);
+    --class-5-trans: rgba(221, 52, 151, 0.6);
+    --class-5: rgba(221, 52, 151, 1);
+    --class-6-trans: rgba(174, 1, 126, 0.6);
+    --class-6: rgba(174, 1, 126, 1);
     --class-7-trans: rgba(122, 1, 119, 0.6);
     --class-7: rgba(122, 1, 119, 1);
 }
 
-
-
-
-
-
-
 .marker-cluster-1 {
-    background-color: var(--class-1-trans) ;
+    background-color: var(--class-1-trans);
 }
 
 .marker-cluster-1 div {
-    background-color:var(--class-1);
+    background-color: var(--class-1);
 }
 
 .marker-cluster-2 {
-    background-color: var(--class-2-trans) ;
+    background-color: var(--class-2-trans);
 }
 
 .marker-cluster-2 div {
-    background-color:var(--class-2);
+    background-color: var(--class-2);
 }
 
 .marker-cluster-3 {
-    background-color: var(--class-3-trans) ;
+    background-color: var(--class-3-trans);
 }
 
 .marker-cluster-3 div {
-    background-color:var(--class-3);
+    background-color: var(--class-3);
 }
 
 .marker-cluster-4 {
-    background-color: var(--class-4-trans) ;
+    background-color: var(--class-4-trans);
 }
 
 .marker-cluster-4 div {
-    background-color:var(--class-4);
+    background-color: var(--class-4);
 }
 
 .marker-cluster-5 {
-    background-color: var(--class-5-trans) ;
+    background-color: var(--class-5-trans);
 }
 
 .marker-cluster-5 div {
-    background-color:var(--class-5);
+    background-color: var(--class-5);
 }
 
 .marker-cluster-6 {
-    background-color: var(--class-6-trans) ;
+    background-color: var(--class-6-trans);
 }
 
 .marker-cluster-6 div {
-    background-color:var(--class-6);
+    background-color: var(--class-6);
 }
 
 .marker-cluster-7 {
-    background-color: var(--class-7-trans) ;
+    background-color: var(--class-7-trans);
 }
 
 .marker-cluster-7 div {
-    background-color:var(--class-7);
+    background-color: var(--class-7);
 }
 
 .marker-cluster {
@@ -203,14 +209,75 @@ body.dark, .leaflet-container.dark {
     line-height: 30px;
 }
 
-svg{
+svg {
     margin: auto;
 }
 
-.leaflet-control-command-interior, .leaflet-popup-content-wrapper{
+.leaflet-control-command-interior, .leaflet-popup-content-wrapper {
     border-radius: 0px;
 }
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
-	will-change: auto;
+    will-change: auto;
+}
+
+.leaflet-control-command-interior.show {
+    display: block;
+}
+
+.easy-button-button {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .leaflet-control-command {
+        bottom: 0px;
+    }
+    .leaflet-control-command-interior {
+        display: block;
+    }
+    .leaflet-right .leaflet-control .no-margin, .leaflet-bottom .leaflet-control {
+        margin: 0px;
+    }
+    .leaflet-control-command-interior {
+        width: 100vw;
+        max-width: 100vw;
+    }
+    .mobile {
+        display: block;
+    }
+    .full {
+        display: none;
+    }
+    .leaflet-control-attribution.show {
+        width: 100vw;
+        background-color: white;
+        padding: unset;
+    }
+    #radioDiv {
+        padding-bottom: .5em;
+    }
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+.leaflet-control-attribution.show {
+    display: block;
+}
+
+#btnAtt {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: unset;
+    text-align: center;
+    vertical-align: bottom;
+    padding-left: 6px;
+    padding-right: 6px;
 }

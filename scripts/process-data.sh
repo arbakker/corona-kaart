@@ -20,6 +20,9 @@ function download() {
     # mkdir -p ../data/src
     # curl https://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/extract/bestuurlijkegrenzen.zip -o ../data/src/bestuurlijkegrenzen.zip
     # unzip ../data/src/bestuurlijkegrenzen.zip -d ../data/src/
+    # curl http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/extract/cbsgebiedsindelingen2019_naarPDOK.zip -o ../data/src/cbsgebiedsindelingen2019_naarPDOK.zip
+    # unzip ../data/src/cbsgebiedsindelingen2019_naarPDOK.zip -d ../data/src/
+
 }
 
 function fix_gem_codes(){
@@ -71,8 +74,13 @@ sqlite3 "$DEST_GPKG" "$SQL"
 # export markers to JSON
 ogr2ogr -f GeoJSON "../data/corona_markers.json" "$DEST_GPKG" -sql "select * from markers" -nln corona_markers -t_srs "EPSG:4326"
 # export point to JSON
-
 ogr2ogr -f GeoJSON "../data/gemeenten_simplified_point.json" "$DEST_GPKG"  -sql  "select centroid(geom) as geom, aantal, Gemeentenaam, Code from gemeenten_corona" -nlt POINT -t_srs EPSG:4326 -nln gemeenten_points
+
+# ggd layer does not align exactly with the gemeenten
+# ogr2ogr -f GeoJSON  "../data/ggd.json" ../data/src/cbsgebiedsindelingen2019_naarPDOK.gpkg cbs_ggdregio_2019_gegeneraliseerd  -nln ggd -t_srs "EPSG:4326"
+# ndjson-cat "../data/ggd.json"  | ndjson-split 'd.features' > ../data/ggd_ndjson.json
+# geo2topo -q 1e5 -n ggd_simplified=../data/ggd_ndjson.json | toposimplify -s 0.000000001 -f | topomerge --mesh -f 'a !== b' ggd_simplified=ggd_simplified  | topo2geo ../data/ggd_simplified.json 
+# geo2topo -q 1e5 -n ggd_simplified_outside=../data/ggd_ndjson.json | toposimplify -s 0.000000001 -f | topomerge --mesh -f 'a === b' ggd_simplified_outside=ggd_simplified_outside  | topo2geo ../data/ggd_simplified_outside.json 
 
 # proprces for simplified gemeenten
 ogr2ogr -f GeoJSON "../data/gemeenten.json" "$DEST_GPKG" gemeenten_corona -nln gemeenten -t_srs "EPSG:4326"
@@ -88,8 +96,14 @@ geo2topo -q 1e5 -n gemeenten_borders_outside=../data/gemeenten_ndjson.json | top
 mkdir -p ../webapp/data
 cp ../data/corona_markers.json ../webapp/data/
 cp ../data/gemeenten_simplified.json ../webapp/data/
+cp ../data/ggd_simplified.json ../webapp/data/
 cp ../data/gemeenten_simplified_point.json ../webapp/data/
 cp ../data/gemeenten_borders_simplified.json ../webapp/data/
 cp ../data/gemeenten_borders_outside.json ../webapp/data/
 
 python3 classify.py ../data/corona_nl.gpkg 5 --layer gemeenten_corona --attribute aantal > ../webapp/classes.json
+
+
+
+
+
