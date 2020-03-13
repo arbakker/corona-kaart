@@ -714,17 +714,27 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
+/* @import url('./fonts/RobotoCondensed-Bold.ttf');
+@import url('./fonts/RobotoCondensed-Regular.ttf');
+@import url('./fonts/RobotoCondensed-BoldItalic.ttf'); */
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("/Roboto-Bold.a2c77014.ttf");
+    src: url("/Roboto-Regular.652d6efc.ttf");
+}
+
+
 #mapid {
     height: 100vh;
 }
 
 body {
     margin: 0px;
-    background-color: #F0F0F0;
 }
 
-.leaflet-container {
-    background: #F0F0F0;
+*{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .marker-cluster-small {
@@ -751,10 +761,6 @@ body {
 
 .marker-cluster-large div, .marker-cluster-large.legend-item {
     background-color: #dd1c77;
-}
-
-#mapid .leaflet-layer {
-    filter: grayscale();
 }
 
 .leaflet-control-command-interior {
@@ -798,6 +804,126 @@ body {
     display: inline-block;
 }
 
+.leaflet-layer.dark {
+    filter: grayscale() invert();
+}
 
+.leaflet-layer.light {
+    filter: grayscale();
+}
+
+body.light, .leaflet-container.light {
+    background: #F0F0F0 none repeat scroll 0% 0%;
+}
+
+body.dark, .leaflet-container.dark {
+    background: #0E0E0E none repeat scroll 0% 0%;
+}
+
+:root {
+    --class-1: rgba(254,235,226, 1);
+    --class-1-trans: rgba(254, 235, 226, 0.6);
+    --class-2: rgba(252,197,192, 1);
+    --class-2-trans: rgba(252,197,192, 0.6);
+    --class-3-trans: rgba(250,159,181, 0.6);
+    --class-3: rgba(250,159,181, 1);
+    --class-4-trans: rgba(247,104,161, 0.6);
+    --class-4: rgba(247,104,161, 1);
+    --class-5-trans: rgba(221,52,151, 0.6);
+    --class-5: rgba(221,52,151, 1);
+    --class-6-trans: rgba(174,1,126, 0.6);
+    --class-6: rgba(174,1,126, 1);
+    --class-7-trans: rgba(122, 1, 119, 0.6);
+    --class-7: rgba(122, 1, 119, 1);
+}
+
+
+
+
+
+
+
+.marker-cluster-1 {
+    background-color: var(--class-1-trans) ;
+}
+
+.marker-cluster-1 div {
+    background-color:var(--class-1);
+}
+
+.marker-cluster-2 {
+    background-color: var(--class-2-trans) ;
+}
+
+.marker-cluster-2 div {
+    background-color:var(--class-2);
+}
+
+.marker-cluster-3 {
+    background-color: var(--class-3-trans) ;
+}
+
+.marker-cluster-3 div {
+    background-color:var(--class-3);
+}
+
+.marker-cluster-4 {
+    background-color: var(--class-4-trans) ;
+}
+
+.marker-cluster-4 div {
+    background-color:var(--class-4);
+}
+
+.marker-cluster-5 {
+    background-color: var(--class-5-trans) ;
+}
+
+.marker-cluster-5 div {
+    background-color:var(--class-5);
+}
+
+.marker-cluster-6 {
+    background-color: var(--class-6-trans) ;
+}
+
+.marker-cluster-6 div {
+    background-color:var(--class-6);
+}
+
+.marker-cluster-7 {
+    background-color: var(--class-7-trans) ;
+}
+
+.marker-cluster-7 div {
+    background-color:var(--class-7);
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+    line-height: 30px;
+}
+
+svg{
+    margin: auto;
+}
+
+.leaflet-control-command-interior, .leaflet-popup-content-wrapper{
+    border-radius: 0px;
+}
 
 /*# sourceMappingURL=/webapp.e31bb0bc.css.map */
