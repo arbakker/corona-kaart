@@ -738,10 +738,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 @font-face {
     font-family: "Roboto Condensed";
     src: url("/Roboto-Bold.a2c77014.ttf");
+    src: url("/Roboto-Italic.98b7a5a6.ttf");
     src: url("/Roboto-Regular.652d6efc.ttf");
 }
 
-
+#map { position:absolute; top:0; bottom:0; width:100%; }
 
 #mapid {
     height: 100vh;
@@ -823,11 +824,11 @@ body {
 }
 
 .leaflet-layer.dark {
-    -webkit-filter:  grayscale() invert(85%);
-    -ms-filter:  grayscale() invert(85%);
-    -o-filter:  grayscale() invert(85%);
-    -moz-filter:  grayscale() invert(85%);
-    filter:  grayscale() invert(85%);
+    -webkit-filter:  grayscale(100%) invert(85%);
+    -ms-filter:  grayscale(100%) invert(85%);
+    -o-filter:  grayscale(100%) invert(85%);
+    -moz-filter:  grayscale(100%) invert(85%);
+    filter:  grayscale(100%) invert(85%);
 }
 
 .leaflet-layer.light {
@@ -958,7 +959,7 @@ svg{
 .easy-button-button{
     display: none;
 }
-
+.mobile{display: none;}
 @media only screen and (max-width: 600px) {
     .leaflet-control-command-interior{
         display: block;
@@ -970,6 +971,7 @@ svg{
         width: 100vw;
         max-width: 100vw;
     }
+    .mobile{display: block;}
     
     .full{
         display: none;
@@ -985,11 +987,12 @@ svg{
 
 #btnAtt{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
     padding: unset;
     text-align: center;
     vertical-align: bottom;
+    padding: 2px;
 }
 
 
