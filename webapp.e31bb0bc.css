@@ -926,4 +926,8 @@ svg{
     border-radius: 0px;
 }
 
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	will-change: auto;
+}
+
 /*# sourceMappingURL=/webapp.e31bb0bc.css.map */

@@ -45683,42 +45683,12 @@ function getColor(value, breaks, colors) {
 
   return color;
 }
-/* global L */
-
-
-var map = L.map('mapid', {
-  attributionControl: false,
-  crs: L.CRS.EPSG3857,
-  maxZoom: 18,
-  minZoom: 5,
-  maxBounds: [[43.934028, -4.262695], [58.378797, 13.886719]]
-}).setView([52.505, 5], 8);
-L.control.attribution({
-  prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>'
-}).addTo(map);
-var backgroundLayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartwater/EPSG:3857/{z}/{x}/{y}.png', {
-  wmts: true,
-  attribution: 'BRT-Achtergrondkaart: © <a href="http://www.kadaster.nl">Kadaster</a> (<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)</span>'
-});
-var gemBordersLayer = L.geoJSON(_gemeenten_borders_simplified.default, {
-  style: function style(feature) {
-    return {
-      fillColor: null,
-      weight: 1,
-      opacity: 1,
-      color: '#878787',
-      dashArray: '4',
-      fillOpacity: 0
-    };
-  }
-});
 
 function onEachFeature(feature, layer) {
   // bind click
   layer.on({
     mouseover: function mouseover(e) {
-      console.log(layer);
-      selected = layer.feature.properties.Code;
+      selectedGemeente = layer.feature.properties.Code;
       gemLayer.eachLayer(function (gLayer) {
         gLayer.setStyle(getStyle(gLayer.feature.properties.Code));
       });
@@ -45729,7 +45699,7 @@ function onEachFeature(feature, layer) {
 function getStyle() {
   var code = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
 
-  if (code === '' || selected !== code) {
+  if (code === '' || selectedGemeente !== code) {
     return {
       fillColor: null,
       color: null,
@@ -45744,39 +45714,6 @@ function getStyle() {
   }
 }
 
-var gemLayer = L.geoJSON(_gemeenten_simplified.default, {
-  onEachFeature: onEachFeature,
-  style: getStyle()
-}).bindPopup(function (layer) {
-  return '<p>Gemeente ' + layer.feature.properties.Gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>';
-});
-var selected = '';
-var gemBordersLayerOutside = L.geoJSON(_gemeenten_borders_outside.default, {
-  style: function style(feature) {
-    console.log(selected);
-
-    if (selected === feature.properties.Code) {
-      return {
-        fillColor: '#878787',
-        weight: 2,
-        opacity: 1,
-        color: '#878787',
-        dashArray: '4',
-        fillOpacity: 1
-      };
-    } else {
-      return {
-        fillColor: null,
-        weight: 2,
-        opacity: 1,
-        color: '#878787',
-        dashArray: '4',
-        fillOpacity: 0
-      };
-    }
-  }
-});
-
 function getBreaks(total) {
   var breaks = [];
   var brk = parseInt(total / 2);
@@ -45788,42 +45725,8 @@ function getBreaks(total) {
 
   breaks.unshift(0);
   return breaks;
-} // markers layer
+} // normalized size circles
 
-
-var markers = L.markerClusterGroup({
-  iconCreateFunction: function iconCreateFunction(cluster) {
-    var color = getColor(cluster.getChildCount(), markerBreaks, markerColors);
-    var classIndex = markerColors.indexOf(color) + 1;
-    return L.divIcon({
-      html: '<div><span>' + cluster.getChildCount() + '</span></div>',
-      className: "marker-cluster marker-cluster-".concat(classIndex),
-      iconSize: [40, 40],
-      iconAnchor: [20, 20]
-    });
-  },
-  polygonOptions: {
-    fillColor: '#e7e1ef',
-    weight: 1,
-    opacity: 1,
-    color: '#dd1c77',
-    fillOpacity: 0.5
-  },
-  singleMarkerMode: true,
-  attribution: 'Data positieve tests Covid-19: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
-});
-var geojsonMarkers = L.geoJSON(_corona_markers.default);
-markers.addLayers(geojsonMarkers);
-map.addLayer(markers);
-markers.refreshClusters(geojsonMarkers);
-backgroundLayer.addTo(map);
-gemBordersLayer.addTo(map);
-gemBordersLayerOutside.addTo(map);
-gemLayer.addTo(map); // events
-
-markers.on('click', function (a) {
-  L.popup().setLatLng([a.layer._latlng.lat, a.layer._latlng.lng]).setContent('<p><b>Gemeente: </b>' + a.layer.feature.properties.gemeentenaam + '</p>').openOn(map);
-}); // newvalue= (max'-min')/(max-min)*(value-min)+min'
 
 var max = 130;
 var min = 10;
@@ -45853,8 +45756,88 @@ function getCircleIcon(feature) {
     });
     return rectIcon;
   }
-} // create the GeoJSON layer and call the styling function with each marker
+}
 
+var selectedGemeente = '';
+/* global L */
+
+var map = L.map('mapid', {
+  attributionControl: false,
+  crs: L.CRS.EPSG3857,
+  maxZoom: 18,
+  minZoom: 5,
+  maxBounds: [[43.934028, -4.262695], [58.378797, 13.886719]]
+}).setView([52.505, 5], 8);
+L.control.attribution({
+  prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>'
+}).addTo(map);
+var backgroundLayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartwater/EPSG:3857/{z}/{x}/{y}.png', {
+  wmts: true,
+  attribution: 'BRT-Achtergrondkaart: © <a href="http://www.kadaster.nl">Kadaster</a> (<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)</span>'
+});
+var gemBordersLayer = L.geoJSON(_gemeenten_borders_simplified.default, {
+  style: function style(feature) {
+    return {
+      fillColor: null,
+      weight: 1,
+      opacity: 1,
+      color: '#878787',
+      dashArray: '4',
+      fillOpacity: 0
+    };
+  }
+});
+var gemLayer = L.geoJSON(_gemeenten_simplified.default, {
+  onEachFeature: onEachFeature,
+  style: getStyle()
+}).bindPopup(function (layer) {
+  return '<p>Gemeente ' + layer.feature.properties.Gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>';
+});
+var gemBordersLayerOutside = L.geoJSON(_gemeenten_borders_outside.default, {
+  style: function style(feature) {
+    if (selectedGemeente === feature.properties.Code) {
+      return {
+        fillColor: '#878787',
+        weight: 2,
+        opacity: 1,
+        color: '#878787',
+        dashArray: '4',
+        fillOpacity: 1
+      };
+    } else {
+      return {
+        fillColor: null,
+        weight: 2,
+        opacity: 1,
+        color: '#878787',
+        dashArray: '4',
+        fillOpacity: 0
+      };
+    }
+  }
+});
+var markers = L.markerClusterGroup({
+  iconCreateFunction: function iconCreateFunction(cluster) {
+    var color = getColor(cluster.getChildCount(), markerBreaks, markerColors);
+    var classIndex = markerColors.indexOf(color) + 1;
+    return L.divIcon({
+      html: '<div><span>' + cluster.getChildCount() + '</span></div>',
+      className: "marker-cluster marker-cluster-".concat(classIndex),
+      iconSize: [40, 40],
+      iconAnchor: [20, 20]
+    });
+  },
+  polygonOptions: {
+    fillColor: '#e7e1ef',
+    weight: 1,
+    opacity: 1,
+    color: '#dd1c77',
+    fillOpacity: 0.5
+  },
+  singleMarkerMode: true,
+  attribution: 'Data positieve tests Covid-19: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
+});
+var geojsonMarkers = L.geoJSON(_corona_markers.default); // create the GeoJSON layer and call the styling function with each marker
 
 var circles = L.geoJSON(_gemeenten_simplified_point.default, {
   pointToLayer: function pointToLayer(feature, latlng) {
@@ -45866,6 +45849,18 @@ var circles = L.geoJSON(_gemeenten_simplified_point.default, {
   }
 }).bindPopup(function (layer) {
   return '<p><b>Gemeente: </b>' + layer.feature.properties.Gemeentenaam + '</p>' + '<p><b>Aantal gevallen: </b>' + layer.feature.properties.aantal + '</p>';
+}); // add layers
+
+markers.addLayers(geojsonMarkers);
+map.addLayer(markers);
+markers.refreshClusters(geojsonMarkers);
+backgroundLayer.addTo(map);
+gemBordersLayer.addTo(map);
+gemBordersLayerOutside.addTo(map);
+gemLayer.addTo(map); // events
+
+markers.on('click', function (a) {
+  L.popup().setLatLng([a.layer._latlng.lat, a.layer._latlng.lng]).setContent('<p><b>Gemeente: </b>' + a.layer.feature.properties.gemeentenaam + '</p>').openOn(map);
 });
 L.Control.Command = L.Control.extend({
   options: {
@@ -45883,7 +45878,8 @@ L.control.command = function (options) {
   return new L.Control.Command(options);
 };
 
-L.control.command({}).addTo(map);
+L.control.command({}).addTo(map); // register event listeners
+
 var radiosViz = document.getElementsByName('viz');
 
 for (var i = 0, _max = radiosViz.length; i < _max; i++) {
@@ -45990,7 +45986,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37607" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33805" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
