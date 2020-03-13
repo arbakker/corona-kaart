@@ -46196,8 +46196,8 @@ var map = L.map('mapid', {
   crs: L.CRS.EPSG3857,
   maxZoom: 18,
   minZoom: 5,
-  maxBounds: [[43.934028, -4.262695], [58.378797, 13.886719]]
-}).setView([52.505, 5], 7);
+  maxBounds: [[43.634028, -4.262695], [58.378797, 13.886719]]
+}).setView([52.205, 5], 8);
 L.control.attribution({
   prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>'
 }).addTo(map);
@@ -46379,6 +46379,11 @@ btnAtt.onclick = function () {
 var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
 
 document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+window.addEventListener('resize', function () {
+  // We execute the same script as before
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+});
 },{"leaflet/dist/leaflet.js":"node_modules/leaflet/dist/leaflet.js","leaflet.control.layers.tree":"node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.js","leaflet.markercluster/dist/leaflet.markercluster":"node_modules/leaflet.markercluster/dist/leaflet.markercluster.js","leaflet-easybutton/src/easy-button":"node_modules/leaflet-easybutton/src/easy-button.js","./node_modules/leaflet.markercluster/dist/MarkerCluster.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.css","./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css":"node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css","./data/corona_markers.json":"data/corona_markers.json","./data/gemeenten_simplified.json":"data/gemeenten_simplified.json","./data/gemeenten_simplified_point.json":"data/gemeenten_simplified_point.json","./data/gemeenten_borders_simplified.json":"data/gemeenten_borders_simplified.json","./data/gemeenten_borders_outside.json":"data/gemeenten_borders_outside.json","./data/ggd_simplified.json":"data/ggd_simplified.json","./data/ggd_simplified_outside.json":"data/ggd_simplified_outside.json","./updated.json":"updated.json","./classes.json":"classes.json","./index.css":"index.css","./legend":"legend.js","d3":"node_modules/d3/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -46407,7 +46412,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42209" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37853" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
