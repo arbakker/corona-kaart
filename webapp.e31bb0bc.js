@@ -17112,12 +17112,18 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.css":[function(require,module,exports) {
+},{"./../fonts/fontawesome-webfont.eot":[["fontawesome-webfont.af69b5ff.eot","node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"node_modules/font-awesome/fonts/fontawesome-webfont.eot"],"./../fonts/fontawesome-webfont.woff2":[["fontawesome-webfont.b54ed0f7.woff2","node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff2"],"./../fonts/fontawesome-webfont.woff":[["fontawesome-webfont.b1f459e7.woff","node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"node_modules/font-awesome/fonts/fontawesome-webfont.woff"],"./../fonts/fontawesome-webfont.ttf":[["fontawesome-webfont.13bba0a5.ttf","node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"node_modules/font-awesome/fonts/fontawesome-webfont.ttf"],"./../fonts/fontawesome-webfont.svg":[["fontawesome-webfont.c0864c1b.svg","node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"node_modules/font-awesome/fonts/fontawesome-webfont.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/pretty-checkbox/dist/pretty-checkbox.min.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/font-awesome/css/font-awesome.min.css":"node_modules/font-awesome/css/font-awesome.min.css","./fonts/Roboto-Bold.ttf":[["Roboto-Bold.a2c77014.ttf","fonts/Roboto-Bold.ttf"],"fonts/Roboto-Bold.ttf"],"./fonts/Roboto-Regular.ttf":[["Roboto-Regular.652d6efc.ttf","fonts/Roboto-Regular.ttf"],"fonts/Roboto-Regular.ttf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/d3/dist/package.js":[function(require,module,exports) {
+},{"./node_modules/leaflet/dist/leaflet.css":"node_modules/leaflet/dist/leaflet.css","./node_modules/font-awesome/css/font-awesome.min.css":"node_modules/font-awesome/css/font-awesome.min.css","./node_modules/pretty-checkbox/dist/pretty-checkbox.min.css":"node_modules/pretty-checkbox/dist/pretty-checkbox.min.css","./fonts/Roboto-Bold.ttf":[["Roboto-Bold.a2c77014.ttf","fonts/Roboto-Bold.ttf"],"fonts/Roboto-Bold.ttf"],"./fonts/Roboto-Regular.ttf":[["Roboto-Regular.652d6efc.ttf","fonts/Roboto-Regular.ttf"],"fonts/Roboto-Regular.ttf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/d3/dist/package.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46227,7 +46233,7 @@ var markers = L.markerClusterGroup({
     fillOpacity: 0.5
   },
   singleMarkerMode: true,
-  attribution: 'Data positieve tests Covid-19: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
+  attribution: 'Data Covid-19 tests: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
 });
 var geojsonMarkers = L.geoJSON(_corona_markers.default); // create the GeoJSON layer and call the styling function with each marker
 
@@ -46261,7 +46267,7 @@ L.Control.Command = L.Control.extend({
   onAdd: function onAdd(map) {
     var controlDiv = L.DomUtil.create('div', 'leaflet-control-command');
     var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
-    controlUI.innerHTML = '<button style="display:inline;float:right;" id="btnAtt"><i class="fa fa-info"></i></button><div id="legendBody"><h1 class="full" style="margin-bottom:5px;">Corona Virus in Nederland</h1>' + '<div id="legend"></div><div><input type="radio" id="cluster" name="viz" value="cluster" checked>' + '<label for="cluster">Cluster</label>' + '<input type="radio" id="circles" name="viz" value="circles">' + '<label for="circles">Cirkels</label><br></div>' + "<p class=\"full\"><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>publicatie datum <a href=\"").concat(_updated.default.url, "\">data</a>:</b> ").concat(_updated.default.date_data, "</p>") + '</div>';
+    controlUI.innerHTML = '<button style="display:inline;float:right;" id="btnAtt"><i class="fa fa-info"></i></button><div id="legendBody"><h1 class="full" style="margin-bottom:5px;">Corona Virus in Nederland</h1>' + '<div id="legend"></div><div id="radioDiv">' + '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' + '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Circles</label></div></div></div>' + "<p class=\"full\"><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>publicatie datum <a href=\"").concat(_updated.default.url, "\">data</a>:</b> ").concat(_updated.default.date_data, "</p>") + '</div>';
     return controlDiv;
   }
 });
@@ -46394,7 +46400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38463" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
