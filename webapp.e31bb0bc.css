@@ -805,7 +805,7 @@ body {
 }
 
 .leaflet-layer.dark {
-    filter: grayscale() invert();
+    filter:  grayscale() invert(85%) ;
 }
 
 .leaflet-layer.light {
@@ -817,7 +817,7 @@ body.light, .leaflet-container.light {
 }
 
 body.dark, .leaflet-container.dark {
-    background: #0E0E0E none repeat scroll 0% 0%;
+    background: #303030 none repeat scroll 0% 0%;
 }
 
 :root {

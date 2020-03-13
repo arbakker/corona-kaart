@@ -45659,7 +45659,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 // import * as scale from 'd3-scale'
 var markerBreaks = getBreaks(_updated.default.total_infections);
 var markerColors = ['#feebe2', '#fcc5c0', '#fa9fb5', '#f768a1', '#dd3497', '#ae017e', '#7a0177'];
-var circlecolors = ['#ffffcc', '#a1dab4', '#41b6c4', '#2c7fb8', '#253494'];
+var circlecolors = ['#feebe2', '#fbb4b9', '#f768a1', '#c51b8a', '#7a0177'];
 var circleBreaks = _classes.default.gemeenten_corona.aantal;
 
 function getColor(value, breaks, colors) {
@@ -45707,7 +45707,7 @@ function getStyle() {
     };
   } else {
     return {
-      fillColor: '#F768A1',
+      fillColor: 'white',
       opacity: 1,
       fillOpacity: 0.3
     };
@@ -45728,7 +45728,7 @@ function getBreaks(total) {
 } // normalized size circles
 
 
-var max = 130;
+var max = 125;
 var min = 10;
 
 function getA() {
@@ -45869,7 +45869,7 @@ L.Control.Command = L.Control.extend({
   onAdd: function onAdd(map) {
     var controlDiv = L.DomUtil.create('div', 'leaflet-control-command');
     var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv);
-    controlUI.innerHTML = '<h1 style="margin-bottom:5px;">Corona Virus in Nederland</h1><div id="legend"></div><label for="viz"><b>Visualisatie</b></label><input type="radio" id="cluster" name="viz" value="cluster" checked>' + '<label for="cluster">Cluster</label>' + '<input type="radio" id="circles" name="viz" value="circles">' + '<label for="circles">Cirkels</label><br>' + '<label for="bgmode"><b>Achtergrondkaart</b></label><input type="radio" id="light" name="bgmode" value="light" checked>' + '<label for="light">Licht</label>' + '<input type="radio" id="dark" name="bgmode" value="dark">' + '<label for="dark">Donker</label>' + "<p><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>publicatie datum <a href=\"").concat(_updated.default.url, "\">data</a>:</b> ").concat(_updated.default.date_data, "</p>");
+    controlUI.innerHTML = '<h1 style="margin-bottom:5px;">Corona Virus in Nederland</h1><div id="legend"></div><label for="viz"><b>Visualisatie</b></label><input type="radio" id="cluster" name="viz" value="cluster" checked>' + '<label for="cluster">Cluster</label>' + '<input type="radio" id="circles" name="viz" value="circles">' + '<label for="circles">Cirkels</label><br>' + "<p><b>totaal aantal positieve tests:</b> ".concat(_updated.default.total_infections, "&nbsp;&nbsp;&nbsp;&nbsp;<b>publicatie datum <a href=\"").concat(_updated.default.url, "\">data</a>:</b> ").concat(_updated.default.date_data, "</p>");
     return controlDiv;
   }
 });
@@ -45911,38 +45911,12 @@ for (var i = 0, _max = radiosViz.length; i < _max; i++) {
   };
 }
 
-var radiosBg = document.getElementsByName('bgmode');
-
-for (var _i = 0, _max2 = radiosBg.length; _i < _max2; _i++) {
-  radiosBg[_i].onclick = function () {
-    if (this.value === 'dark') {
-      Array.prototype.forEach.call(document.getElementsByClassName('leaflet-layer'), function (el) {
-        el.classList.remove('light');
-        el.classList.add('dark');
-      });
-      Array.prototype.forEach.call(document.getElementsByClassName('leaflet-container'), function (el) {
-        el.classList.remove('light');
-        el.classList.add('dark');
-      });
-      document.body.classList.remove('light');
-      document.body.classList.add('dark');
-    } else {
-      Array.prototype.forEach.call(document.getElementsByClassName('leaflet-layer'), function (el) {
-        el.classList.remove('dark');
-        el.classList.add('light');
-      });
-      Array.prototype.forEach.call(document.getElementsByClassName('leaflet-container'), function (el) {
-        el.classList.remove('dark');
-        el.classList.add('light');
-      });
-      document.body.classList.remove('dark');
-      document.body.classList.add('light');
-    }
-  };
-}
-
 Array.prototype.forEach.call(document.getElementsByClassName('leaflet-layer'), function (el) {
-  el.classList.add('light');
+  el.classList.add('dark');
+});
+document.body.classList.add('dark');
+Array.prototype.forEach.call(document.getElementsByClassName('leaflet-container'), function (el) {
+  el.classList.add('dark');
 });
 
 function getLegend(breaks, colors) {
@@ -45986,7 +45960,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33805" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46239" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
