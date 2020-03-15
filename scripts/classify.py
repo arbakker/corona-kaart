@@ -2,7 +2,6 @@ import json
 import click
 import numpy as np
 import jenks_natural_breaks
-import pandas as pd
 import fiona
 
 @click.command()
@@ -24,10 +23,8 @@ def cli(filename, nr_classes, layer, attribute):
             if target_attribute and att != target_attribute:
                 continue
             aantal_list = [rec['properties'][att] for rec in f_layer if rec['properties'][att] != 0]
-            data = {att: aantal_list}
-            df1 = pd.DataFrame(data, columns=[att])
-            array = df1[att].to_numpy()
-            breaks = jenks_natural_breaks.classify(array, 5)
+            np_array = np.array(aantal_list)
+            breaks = jenks_natural_breaks.classify(np_array, 5)
             breaks[0] = 0
             result[lyr][att] = breaks
     print(json.dumps(result))

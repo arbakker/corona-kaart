@@ -56,3 +56,5 @@ echo "{\"date_data\": \"$DATE_DATA\",\"url\": \"$URL_DATA\", \"total_infections\
 cp ../data/gemeenten_simplified_joined.json ../webapp/data/ 
 cp ../data/gemeenten_points.json ../webapp/data/ 
 python3 classify.py ../data/gemeenten_points.json 5 --layer gemeenten_points --attribute aantal > ../webapp/classes.json
+
+cat ../webapp/classes.json
