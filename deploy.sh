@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd scripts
-# ./process-data.sh
+./process-data.sh
 cd -
 cd webapp
 rm -rf dist/*

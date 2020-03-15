@@ -17,8 +17,16 @@ RUN npm install -g topojson-simplify  ndjson-cli  topojson-client topojson-serve
 ADD "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_arm.zip" /pup.zip
 RUN unzip /pup.zip -d /usr/local/bin/
 
+# Copy over private key, and set permissions
+# Warning! Anyone who gets their hands on this image will be able
+# to retrieve this private key file from the corresponding image layer
 COPY id_rsa* /root/.ssh/
-RUN echo "   IdentityFile ~/.ssh/is_rsa" >> /etc/ssh/ssh_config
+RUN echo "   IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
+# Create known_hosts
+RUN touch /root/.ssh/known_hosts
+# Add bitbuckets key
+RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
+
 RUN mkdir -p /corona
 
 RUN apt-get install -y g++ build-essential libssl-dev libffi-dev python-dev
@@ -33,10 +41,12 @@ RUN git clone -b gh-pages "https://github.com/arbakker/corona-map-nl.git" /coron
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data
 
-WORKDIR /corona/corona
+WORKDIR /corona/corona/webapp
 RUN npm install .
 
-WORKDIR /corona/corona/scripts
+RUN git config --global user.email "a.r.bakker1@gmail.com"
+RUN git config --global user.name "Anton Bakker"
 
-CMD ['bash', '-c' '/corona/corona/deploy.sh']
+WORKDIR /corona/corona
+ENTRYPOINT ["/corona/corona/deploy.sh"] 
 
