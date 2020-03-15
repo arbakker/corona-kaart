@@ -66,7 +66,7 @@ while read -r CODE;do
     aantal=$(ogrinfo "$DEST_GPKG" -sql "select aantal from gemeenten_corona where Code = '$CODE'" | grep "aantal " | cut -d= -f2)    
     for i in $(seq $aantal); do
         # use AsGPB to cast geometry to gpkg geom
-        echo "${SQL}INSERT INTO markers SELECT AsGPB(Centroid(GeomFromGPB(geom))), Gemeentenaam as gemeentenaam, Code as code from gemeenten_corona where Code = '$CODE';" $SQL_SCRIPT
+        echo "INSERT INTO markers SELECT AsGPB(Centroid(GeomFromGPB(geom))), Gemeentenaam as gemeentenaam, Code as code from gemeenten_corona where Code = '$CODE';" > $SQL_SCRIPT
     done
 done< <(ogrinfo "$DEST_GPKG" -sql "select * from gemeenten_corona where aantal > 0" -geom=NO | grep "Code " | cut -d"=" -f2)
 echo EXECUTING SQL
