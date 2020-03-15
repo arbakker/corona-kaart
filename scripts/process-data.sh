@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -eu
 
 DEST_GPKG="../data/corona_nl.gpkg"
@@ -9,8 +8,10 @@ DEST_CSVT_FIXED="../data/corona_fix_gem_codes.csvt"
 
 DATE_DATA=""
 URL_DATA=""
+
 COMMENT=""
 UNKNOWN=0
+mkdir -p ../data
 
 function download() {
     URL_DATA="https://www.rivm.nl/coronavirus-kaart-van-nederland"
@@ -40,8 +41,6 @@ rm -f $DEST_GPKG
 
 # variable
 echo '"String","String","Integer"' > "$DEST_CSVT_FIXED"
-
-
 ogr2ogr -f GeoJSON -lco "COORDINATE_PRECISION=6" -sql "select gemeenten_simplified.Gemeentenaam as gemeentenaam, corona_fix_gem_codes.Aantal as aantal from gemeenten_simplified left join '../data/corona_fix_gem_codes.csv'.corona_fix_gem_codes on gemeenten_simplified.Code = corona_fix_gem_codes.id" ../data/gemeenten_simplified_joined.json ../data-src/gemeenten_simplified.json -nln gemeenten_simplified_joined 
 ogrinfo ../data/gemeenten_simplified_joined.json -dialect sqlite -sql "update gemeenten_simplified_joined set aantal=0 where aantal IS NULL"
 
