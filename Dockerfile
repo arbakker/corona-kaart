@@ -36,8 +36,8 @@ RUN pip3 install cython && \
     pip3 install --no-cache-dir click jenks_natural_breaks numpy
 
 ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
-RUN git clone -b master "https://github.com/arbakker/corona-map-nl.git" /corona/corona
-RUN git clone -b gh-pages "https://github.com/arbakker/corona-map-nl.git" /corona/gh-pages
+RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
+RUN git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data
 
