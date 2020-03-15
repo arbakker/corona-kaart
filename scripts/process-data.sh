@@ -12,6 +12,7 @@ URL_DATA=""
 COMMENT=""
 UNKNOWN=0
 mkdir -p ../data
+mkdir -p ../webapp/data
 
 function download() {
     URL_DATA="https://www.rivm.nl/coronavirus-kaart-van-nederland"
