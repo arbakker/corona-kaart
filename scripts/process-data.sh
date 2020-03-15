@@ -10,16 +10,16 @@ DEST_CSVT_FIXED="../data/corona_fix_gem_codes.csvt"
 
 DATE_DATA=""
 URL_DATA=""
-
+mkdir -p ../data
 
 function download() {
     URL_DATA="https://www.rivm.nl/coronavirus-kaart-van-nederland"
     curl -s "$URL_DATA" | pup '#csvData text{}' > "$DEST_CSV"
     sed -i "s/&#39;/'/" "$DEST_CSV"
     DATE_DATA=$(cat "$DEST_CSV" | grep peildatum | cut -d' ' -f2-4 | cut -d";" -f1)
-    # mkdir -p ../data/src
-    # curl https://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/extract/bestuurlijkegrenzen.zip -o ../data/src/bestuurlijkegrenzen.zip
-    # unzip ../data/src/bestuurlijkegrenzen.zip -d ../data/src/
+    mkdir -p ../data/src
+    #curl https://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/extract/bestuurlijkegrenzen.zip -o ../data/src/bestuurlijkegrenzen.zip
+    #unzip ../data/src/bestuurlijkegrenzen.zip -d ../data/src/
     # curl http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/extract/cbsgebiedsindelingen2019_naarPDOK.zip -o ../data/src/cbsgebiedsindelingen2019_naarPDOK.zip
     # unzip ../data/src/cbsgebiedsindelingen2019_naarPDOK.zip -d ../data/src/
 
@@ -60,16 +60,17 @@ echo "{\"date_data\": \"$DATE_DATA\",\"url\": \"$URL_DATA\", \"total_infections\
 # create new table marker, using sqlite3 because duplicating features in ogr2ogr is quite inefficient
 sqlite3 "$DEST_GPKG" "CREATE TABLE markers (geom POINT,gemeentenaam TEXT,code TEXT);insert into gpkg_contents values('markers','features','markers','','2020-03-12T17:04:36.134Z',0,0,360,90,28992);insert into gpkg_geometry_columns values( 'markers', 'geom', 'POINT' , 28992, 0,0);"
 
-SQL="SELECT load_extension('mod_spatialite');"
+SQL_SCRIPT="./script.sql"
+echo "SELECT load_extension('mod_spatialite');" > $SQL_SCRIPT
 while read -r CODE;do
     aantal=$(ogrinfo "$DEST_GPKG" -sql "select aantal from gemeenten_corona where Code = '$CODE'" | grep "aantal " | cut -d= -f2)    
     for i in $(seq $aantal); do
         # use AsGPB to cast geometry to gpkg geom
-        SQL="${SQL}INSERT INTO markers SELECT AsGPB(Centroid(GeomFromGPB(geom))), Gemeentenaam as gemeentenaam, Code as code from gemeenten_corona where Code = '$CODE';"
+        echo "${SQL}INSERT INTO markers SELECT AsGPB(Centroid(GeomFromGPB(geom))), Gemeentenaam as gemeentenaam, Code as code from gemeenten_corona where Code = '$CODE';" $SQL_SCRIPT
     done
 done< <(ogrinfo "$DEST_GPKG" -sql "select * from gemeenten_corona where aantal > 0" -geom=NO | grep "Code " | cut -d"=" -f2)
 echo EXECUTING SQL
-sqlite3 "$DEST_GPKG" "$SQL"
+sqlite3 "$DEST_GPKG" < "$SQL_SCRIPT"
 
 # export markers to JSON
 ogr2ogr -f GeoJSON "../data/corona_markers.json" "$DEST_GPKG" -sql "select * from markers" -nln corona_markers -t_srs "EPSG:4326"
@@ -96,7 +97,7 @@ geo2topo -q 1e5 -n gemeenten_borders_outside=../data/gemeenten_ndjson.json | top
 mkdir -p ../webapp/data
 cp ../data/corona_markers.json ../webapp/data/
 cp ../data/gemeenten_simplified.json ../webapp/data/
-cp ../data/ggd_simplified.json ../webapp/data/
+#cp ../data/ggd_simplified.json ../webapp/data/
 cp ../data/gemeenten_simplified_point.json ../webapp/data/
 cp ../data/gemeenten_borders_simplified.json ../webapp/data/
 cp ../data/gemeenten_borders_outside.json ../webapp/data/
