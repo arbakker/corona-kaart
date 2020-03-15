@@ -7,25 +7,22 @@ import 'leaflet-easybutton/src/easy-button'
 import './node_modules/leaflet.markercluster/dist/MarkerCluster.css'
 import './node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css'
 
-import coronaMarkers from './data/corona_markers.json'
-import gemeenten from './data/gemeenten_simplified.json'
-import gemeentenPoint from './data/gemeenten_simplified_point.json'
-import gemeentenBorders from './data/gemeenten_borders_simplified.json'
-import gemeentenBordersOutside from './data/gemeenten_borders_outside.json'
+import gemeenten from './data/gemeenten_simplified_joined.json'
+import gemeentenPoint from './data/gemeenten_points.json'
+import gemeentenBorders from './data-fixed/gemeenten_borders.json'
+import gemeentenBordersOutside from './data-fixed/gemeenten_borders_outside.json'
 import updated from './updated.json'
 import classes from './classes.json'
 import './index.css'
 import { legend } from './legend'
 import * as d3 from 'd3'
 
-// import * as scale from 'd3-scale'
-
 const markerBreaks = getBreaks(updated.total_infections)
 const markerColors = ['#feebe2', '#fcc5c0', '#fa9fb5', '#f768a1', '#dd3497', '#ae017e', '#7a0177']
 
 const circlecolors = ['#feebe2', '#fbb4b9', '#f768a1', '#c51b8a', '#7a0177']
 
-const circleBreaks = classes.gemeenten_corona.aantal
+const circleBreaks = classes.gemeenten_points.aantal
 
 function getColor (value, breaks, colors) {
   let color
@@ -45,24 +42,6 @@ function getColor (value, breaks, colors) {
     }
   }
   return color
-}
-
-function highlight (e, layer) {
-  selectedGemeente = layer.feature.properties.Code
-  gemLayer.eachLayer(function (gLayer) {
-    gLayer.setStyle(getStyle(gLayer.feature.properties.Code))
-  })
-}
-function onEachFeature (feature, layer) {
-  // bind click
-  layer.on({
-    mouseover: function (e) {
-      highlight(e, layer)
-    },
-    click: function (e) {
-      highlight(e, layer)
-    }
-  })
 }
 
 function getStyle (code = '') {
@@ -108,12 +87,12 @@ function getCircleIcon (feature) {
     var calculatedSize = A * (aantal - updated.min) + min
     var CustomIcon = L.Icon.extend({
       options: {
-        iconSize: [calculatedSize, calculatedSize],
         iconAnchor: [calculatedSize / 3, calculatedSize / 2]
       }
     })
     const color = getColor(feature.properties.aantal, circleBreaks, circlecolors)
-    const achenSvgString = `<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><circle cx='50' cy='50' r='40' fill='${color}' /></svg>`
+    const strokeColor = 'black'
+    const achenSvgString = `<svg xmlns='http://www.w3.org/2000/svg' width='${calculatedSize}' height='${calculatedSize}'><circle cx='${calculatedSize / 2}' cy='${calculatedSize / 2}' r='${(calculatedSize / 2) - calculatedSize * 0.1}' fill='${color}' opacity='80%' stroke='${strokeColor}'  stroke-width="1"/></svg>`
     const myIconUrl = encodeURI('data:image/svg+xml,' + achenSvgString).replace('#', '%23')
     var rectIcon = new CustomIcon({ iconUrl: myIconUrl })
     return rectIcon
@@ -178,18 +157,33 @@ const gemBordersLayerOutside = L.geoJSON(gemeentenBordersOutside, {
 })
 
 const gemLayer = L.geoJSON(gemeenten, {
-  onEachFeature: onEachFeature,
+  // onEachFeature: onEachFeature,
   style: getStyle()
 }).bindPopup(function (layer) {
-  return '<p>Gemeente ' + layer.feature.properties.Gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>'
+  return getPopupHTML(layer.feature.properties.gemeentenaam, layer.feature.properties.aantal)
 })
+
+function getPopupHTML (naam, aantal) {
+  return '<p>Gemeente ' + naam + ': ' + aantal + '<p>'
+}
 
 const markers = L.markerClusterGroup({
   iconCreateFunction: function (cluster) {
-    const color = getColor(cluster.getChildCount(), markerBreaks, markerColors)
+    let count = 0
+    const childs = cluster.getAllChildMarkers()
+    for (let i = 0; i < childs.length; i++) {
+      const child = childs[i]
+      count += child.feature.properties.aantal
+    }
+    if (count === 0) {
+      return
+    }
+    const color = getColor(count, markerBreaks, markerColors)
     const classIndex = markerColors.indexOf(color) + 1
+
+    cluster.getAllChildMarkers().forEach(function (el) { })
     return L.divIcon({
-      html: '<div><span>' + cluster.getChildCount() + '</span></div>',
+      html: '<div><span>' + count + '</span></div>',
       className: `marker-cluster marker-cluster-${classIndex}`,
       iconSize: [40, 40],
       iconAnchor: [20, 20]
@@ -206,7 +200,7 @@ const markers = L.markerClusterGroup({
   attribution: 'Bron: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
 })
 
-const geojsonMarkers = L.geoJSON(coronaMarkers)
+const geojsonMarkers = L.geoJSON(gemeentenPoint)
 
 // create the GeoJSON layer and call the styling function with each marker
 var circles = L.geoJSON(gemeentenPoint, {
@@ -216,7 +210,7 @@ var circles = L.geoJSON(gemeentenPoint, {
     }
   }
 }).bindPopup(function (layer) {
-  return '<p>Gemeente ' + layer.feature.properties.Gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>'
+  return '<p>Gemeente ' + layer.feature.properties.gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>'
 })
 
 // add layers
@@ -224,7 +218,6 @@ markers.addLayers(geojsonMarkers)
 map.addLayer(markers)
 markers.refreshClusters(geojsonMarkers)
 backgroundLayer.addTo(map)
-// gemBordersLayer.addTo(map)
 gemBordersLayerOutside.addTo(map)
 gemLayer.addTo(map)
 
@@ -232,7 +225,7 @@ gemLayer.addTo(map)
 markers.on('click', function (a) {
   L.popup()
     .setLatLng([a.layer._latlng.lat, a.layer._latlng.lng])
-    .setContent('<p><b>Gemeente: </b>' + a.layer.feature.properties.gemeentenaam + '</p>')
+    .setContent(getPopupHTML(a.layer.feature.properties.gemeentenaam, a.layer.feature.properties.aantal))
     .openOn(map)
 })
 
@@ -247,7 +240,7 @@ L.Control.Command = L.Control.extend({
       '<div id="legend"></div><div id="radioDiv">' +
       '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' +
       '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Cirkel</label></div></div></div>' +
-      `<p class="full"><b>totaal aantal positieve tests:</b> ${updated.total_infections}&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}</p>` +
+      `<p class="full"><b>totaal aantal positieve tests: </b>${updated.total_infections} <span title="${updated.comment}"><i class="fa fa-asterisk"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}</p>` +
       '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}</span>`
     return controlDiv
   }
@@ -334,6 +327,5 @@ map.on('zoom', function () {
   if (z >= 9 && z < 18) {
     return gemBordersLayer.addTo(map)
   }
-
   return gemBordersLayer.removeFrom(map)
 })

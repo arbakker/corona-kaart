@@ -28,6 +28,7 @@ def cli(filename, nr_classes, layer, attribute):
             df1 = pd.DataFrame(data, columns=[att])
             array = df1[att].to_numpy()
             breaks = jenks_natural_breaks.classify(array, 5)
+            breaks[0] = 0
             result[lyr][att] = breaks
     print(json.dumps(result))
 
