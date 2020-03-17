@@ -29,14 +29,18 @@ RUN touch /root/.ssh/known_hosts
 # Add bitbuckets key
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
+RUN apt-get install -y libffi-dev python-dev
 RUN pip3 install --no-cache-dir click jenks_natural_breaks numpy
 
 RUN mkdir -p /corona
+
+RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data
 
 RUN git config --global user.email "a.r.bakker1@gmail.com"
 RUN git config --global user.name "Anton Bakker"
+
 
 WORKDIR /corona/corona
 ENTRYPOINT ["/corona/corona/deploy.sh"] 

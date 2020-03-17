@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+set -eu
 
-RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
-RUN git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
+git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
+git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
+
 cd /corona/corona/webapp
 npm install --only=prod 
 
