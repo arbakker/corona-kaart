@@ -29,15 +29,13 @@ RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 RUN mkdir -p /corona
 
-RUN apt-get install -y g++ build-essential libssl-dev libffi-dev python-dev
+RUN apt-get install -y g++ build-essential libssl-dev libffi-dev python-dev jq
 RUN export GDAL_CONFIG=/usr/local/bin/gdal-config
 RUN pip3 install cython && \
     GDAL_CONFIG=/usr/bin/gdal-config pip3 install --no-binary fiona fiona && \
     pip3 install --no-cache-dir click jenks_natural_breaks numpy
 
 ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
-RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
-RUN git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data
 
