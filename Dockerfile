@@ -9,10 +9,12 @@ RUN apt-get update && apt-get install -y \
   gdal-bin \
   git \ 
   libsqlite3-mod-spatialite \
-  software-properties-common
+  software-properties-common \ 
+  jq
+
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install -g topojson-simplify  ndjson-cli  topojson-client topojson-server
+RUN npm install -g topojson-simplify ndjson-cli topojson-client topojson-server
 
 ADD "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_arm.zip" /pup.zip
 RUN unzip /pup.zip -d /usr/local/bin/
@@ -27,24 +29,14 @@ RUN touch /root/.ssh/known_hosts
 # Add bitbuckets key
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
+RUN pip3 install --no-cache-dir click jenks_natural_breaks numpy
+
 RUN mkdir -p /corona
-
-RUN apt-get install -y g++ build-essential libssl-dev libffi-dev python-dev jq
-RUN export GDAL_CONFIG=/usr/local/bin/gdal-config
-RUN pip3 install cython && \
-    GDAL_CONFIG=/usr/bin/gdal-config pip3 install --no-binary fiona fiona && \
-    pip3 install --no-cache-dir click jenks_natural_breaks numpy
-
-ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data
-
-WORKDIR /corona/corona/webapp
-RUN npm install .
 
 RUN git config --global user.email "a.r.bakker1@gmail.com"
 RUN git config --global user.name "Anton Bakker"
 
 WORKDIR /corona/corona
 ENTRYPOINT ["/corona/corona/deploy.sh"] 
-
