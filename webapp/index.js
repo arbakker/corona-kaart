@@ -92,7 +92,7 @@ function getCircleIcon (feature) {
     })
     const color = getColor(feature.properties.aantal, circleBreaks, circlecolors)
     const strokeColor = 'black'
-    const achenSvgString = `<svg xmlns='http://www.w3.org/2000/svg' width='${calculatedSize}' height='${calculatedSize}'><circle cx='${calculatedSize / 2}' cy='${calculatedSize / 2}' r='${(calculatedSize / 2) - calculatedSize * 0.1}' fill='${color}' opacity='80%' stroke='${strokeColor}'  stroke-width="1"/></svg>`
+    const achenSvgString = `<svg xmlns='http://www.w3.org/2000/svg' width='${calculatedSize}' height='${calculatedSize}'><circle cx='${calculatedSize / 2}' cy='${calculatedSize / 2}' r='${(calculatedSize / 2) - calculatedSize * 0.1}' fill='${color}' opacity='0.8' stroke='${strokeColor}'  stroke-width="1"/></svg>`
     const myIconUrl = encodeURI('data:image/svg+xml,' + achenSvgString).replace('#', '%23')
     var rectIcon = new CustomIcon({ iconUrl: myIconUrl })
     return rectIcon
@@ -240,8 +240,8 @@ L.Control.Command = L.Control.extend({
       '<div id="legend"></div><div id="radioDiv">' +
       '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' +
       '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Cirkel</label></div></div></div>' +
-      `<p class="full"><b>totaal aantal positieve tests: </b>${updated.total_infections} <span title="${updated.comment}"><i class="fa fa-asterisk"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}</p>` +
-      '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}</span>`
+      `<p class="full"><b>totaal aantal positieve tests: </b>${updated.total_infections}&nbsp;&nbsp;<span title="${updated.comment}"><i class="fa fa-asterisk"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></p>` +
+      '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></span>`
     return controlDiv
   }
 })
