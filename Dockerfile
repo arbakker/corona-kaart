@@ -34,6 +34,7 @@ RUN pip3 install --no-cache-dir click jenks_natural_breaks numpy
 
 RUN mkdir -p /corona
 
+ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
 RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
 RUN mkdir -p /corona/corona/webapp/data
 RUN mkdir -p /corona/corona/data

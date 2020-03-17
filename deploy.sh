@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
+git -C /corona/corona pull
 git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
 
 cd /corona/corona/webapp
