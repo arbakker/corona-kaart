@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "parcel-bundler": "^1.12.4",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "d3": "^5.15.0",
     "d3-color-legend": "^1.2.4",
@@ -33,6 +34,5 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "parcel-bundler": "^1.12.4"
   }
 }
