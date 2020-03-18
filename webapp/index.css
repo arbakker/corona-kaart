@@ -106,7 +106,7 @@ body {
 }
 
 .leaflet-layer.light {
-    filter: grayscale();
+    filter: grayscale(50%);
 }
 
 body.light, .leaflet-container.light {
@@ -118,21 +118,22 @@ body.dark, .leaflet-container.dark {
 }
 
 :root {
-    --class-1: rgba(254, 235, 226, 1);
-    --class-1-trans: rgba(254, 235, 226, 0.6);
-    --class-2: rgba(252, 197, 192, 1);
-    --class-2-trans: rgba(252, 197, 192, 0.6);
-    --class-3-trans: rgba(250, 159, 181, 0.6);
-    --class-3: rgba(250, 159, 181, 1);
-    --class-4-trans: rgba(247, 104, 161, 0.6);
-    --class-4: rgba(247, 104, 161, 1);
-    --class-5-trans: rgba(221, 52, 151, 0.6);
-    --class-5: rgba(221, 52, 151, 1);
-    --class-6-trans: rgba(174, 1, 126, 0.6);
-    --class-6: rgba(174, 1, 126, 1);
-    --class-7-trans: rgba(122, 1, 119, 0.6);
-    --class-7: rgba(122, 1, 119, 1);
+    --class-1: rgb(241, 238, 246);
+    --class-1-trans: rgba(241, 238, 246, 0.6);
+    --class-2: rgb(208, 209, 230);
+    --class-2-trans: rgba(208, 209, 230, 0.6);
+    --class-3: rgb(166, 189, 219);
+    --class-3-trans: rgba(166, 189, 219, 0.6);
+    --class-4: rgb(116, 169, 207);
+    --class-4-trans: rgba(116, 169, 207, 0.6);
+    --class-5: rgb(54, 144, 192);
+    --class-5-trans: rgba(54, 144, 192, 0.6);
+    --class-6: rgb(5, 112, 176);
+    --class-6-trans: rgba(5, 112, 176, 0.6);
+    --class-7: rgb(3, 78, 123);
+    --class-7-trans: rgba(3, 78, 123, 0.6);
 }
+
 
 .marker-cluster-1 {
     background-color: var(--class-1-trans);

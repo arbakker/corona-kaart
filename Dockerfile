@@ -4,17 +4,11 @@ RUN apt-get update && apt-get install -y \
   unzip \
   curl \
   git \ 
-  sqlite3 \
-  libgdal-dev \
-  gdal-bin \
-  git \ 
-  libsqlite3-mod-spatialite \
   software-properties-common \ 
   jq
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install -g topojson-simplify ndjson-cli topojson-client topojson-server
 
 ADD "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_arm.zip" /pup.zip
 RUN unzip /pup.zip -d /usr/local/bin/
@@ -29,15 +23,9 @@ RUN touch /root/.ssh/known_hosts
 # Add bitbuckets key
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
-RUN apt-get install -y libffi-dev python-dev
-RUN pip3 install --no-cache-dir click jenks_natural_breaks numpy
-
 RUN mkdir -p /corona
-
 ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
 RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
-RUN mkdir -p /corona/corona/webapp/data
-RUN mkdir -p /corona/corona/data
 
 RUN git config --global user.email "a.r.bakker1@gmail.com"
 RUN git config --global user.name "Anton Bakker"
