@@ -5,10 +5,9 @@ RUN apt-get update && apt-get install -y \
   curl \
   git \ 
   software-properties-common \ 
-  jq
+  jq \ 
+  build-essential
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs
 
 ADD "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_arm.zip" /pup.zip
 RUN unzip /pup.zip -d /usr/local/bin/
@@ -24,12 +23,15 @@ RUN touch /root/.ssh/known_hosts
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 RUN mkdir -p /corona
+
 ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/master version.json
 RUN git clone -b master "git@github.com:arbakker/corona-map-nl.git" /corona/corona
 
+ADD https://api.github.com/repos/arbakker/corona-map-nl/git/refs/heads/gh-pages version.json
+RUN git clone -b gh-pages "git@github.com:arbakker/corona-map-nl.git" /corona/gh-pages
+
 RUN git config --global user.email "a.r.bakker1@gmail.com"
 RUN git config --global user.name "Anton Bakker"
-
 
 WORKDIR /corona/corona
 ENTRYPOINT ["/corona/corona/deploy.sh"] 
