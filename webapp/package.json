@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build --public-url . index.html && cp corona.csv dist/"
+    "start": "parcel index.html && cp corona.csv dist/ && cp updated.json dist/",
+    "build": "parcel build --public-url . index.html && cp corona.csv dist/ && cp updated.json dist/"
   },
   "author": "",
   "license": "MIT",

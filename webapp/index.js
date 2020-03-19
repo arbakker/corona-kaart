@@ -10,7 +10,6 @@ import gemeenten from './data/gemeenten_simplified.json'
 import gemeentenPoint from './data/gemeenten_points.json'
 import gemeentenBorders from './data/gemeenten_borders.json'
 import gemeentenBordersOutside from './data/gemeenten_borders_outside.json'
-import updated from './updated.json'
 import './index.css'
 import { legend } from './legend'
 import * as d3 from 'd3'
@@ -58,7 +57,20 @@ function getCSV () {
     })
 }
 
-getCSV().then((data) => {
+function getData() {
+  return fetch('updated.json')
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      return data
+    })
+}
+
+Promise.all([getCSV(), getData()]).then(function(values) {
+  console.log(values)
+  let data = values[0]
+  let updated = values[1]
   data.forEach(function (itemData) {
     if (parseInt(itemData.Gemnr) !== -1) {
       const tmp = parseInt(itemData.Aantal)
@@ -94,14 +106,16 @@ getCSV().then((data) => {
   A = (max - min) / (aantalMax - aantalMin)
 
   const markerBreaks = getBreaks(aantalSum)
+  
   var map = L.map('mapid', {
-    attributionControl: false,
-    crs: L.CRS.EPSG3857,
-    maxZoom: 18,
-    minZoom: 5,
-    maxBounds: [[43.634028, -4.262695],
-      [58.378797, 13.886719]]
-  }).setView([52, 5.3], 7)
+        attributionControl: false,
+        crs: L.CRS.EPSG3857,
+        maxZoom: 18,
+        minZoom: 5,
+        maxBounds: [[43.634028, -4.262695],
+          [58.378797, 13.886719]]
+      }).setView([52, 5.3], 7)
+
   circleBreaks = ss.jenks(aantalArray, 5)
   const comment = data[0].Gemeente
   L.Control.Command = L.Control.extend({
