@@ -20,7 +20,9 @@ const markerColors = ['#f1eef6', '#d0d1e6', '#a6bddb', '#74a9cf', '#3690c0', '#0
 const circleColors = ['#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d']
 
 var circleBreaks
+var choroBreaks
 const aantalArray = []
+const aant100kArray = []
 var aantalSum = 0
 var aantalMin = Number.POSITIVE_INFINITY
 var aantalMax = Number.NEGATIVE_INFINITY
@@ -47,8 +49,9 @@ function getCSV () {
       }).fromString(data)
         .then(function (result) {
           result.forEach(function (item) {
-            aantalArray.push(parseInt(item.Aantal))
             if (parseInt(item.Gemnr) !== -1) {
+              aant100kArray.push(parseFloat(item.Aant100k))
+              aantalArray.push(parseInt(item.Aantal))
               item.Gemnr = item.Gemnr.paddingLeft('0000')
             }
           })
@@ -57,7 +60,7 @@ function getCSV () {
     })
 }
 
-function getData() {
+function getData () {
   return fetch('updated.json')
     .then((response) => {
       return response.json()
@@ -67,10 +70,10 @@ function getData() {
     })
 }
 
-Promise.all([getCSV(), getData()]).then(function(values) {
+Promise.all([getCSV(), getData()]).then(function (values) {
   console.log(values)
-  let data = values[0]
-  let updated = values[1]
+  const data = values[0]
+  const updated = values[1]
   data.forEach(function (itemData) {
     if (parseInt(itemData.Gemnr) !== -1) {
       const tmp = parseInt(itemData.Aantal)
@@ -97,26 +100,27 @@ Promise.all([getCSV(), getData()]).then(function(values) {
     })
   })
   for (var i = gemeentenPoint.features.length - 1; i >= 0; i--) {
-    if (gemeentenPoint.features[i].properties.aantal === 0) { 
-      gemeentenPoint.features.splice(i, 1);
+    if (gemeentenPoint.features[i].properties.aantal === 0) {
+      gemeentenPoint.features.splice(i, 1)
     }
   }
 
-
   A = (max - min) / (aantalMax - aantalMin)
-
   const markerBreaks = getBreaks(aantalSum)
-  
+
   var map = L.map('mapid', {
-        attributionControl: false,
-        crs: L.CRS.EPSG3857,
-        maxZoom: 18,
-        minZoom: 5,
-        maxBounds: [[43.634028, -4.262695],
-          [58.378797, 13.886719]]
-      }).setView([52, 5.3], 7)
+    attributionControl: false,
+    crs: L.CRS.EPSG3857,
+    maxZoom: 18,
+    minZoom: 5,
+    maxBounds: [[43.634028, -4.262695],
+      [58.378797, 13.886719]]
+  }).setView([52, 5.3], 7)
 
   circleBreaks = ss.jenks(aantalArray, 5)
+  console.log(aant100kArray)
+  choroBreaks = ss.jenks(aant100kArray, 5)
+  console.log(choroBreaks)
   const comment = data[0].Gemeente
   L.Control.Command = L.Control.extend({
     options: {
@@ -127,8 +131,8 @@ Promise.all([getCSV(), getData()]).then(function(values) {
       var controlUI = L.DomUtil.create('div', 'leaflet-control-command-interior', controlDiv)
       controlUI.innerHTML = '<button style="display:inline;float:right;" id="btnAtt"><i class="fa fa-info"></i></button><div id="legendBody"><h1 class="full" style="margin-bottom:5px;">Corona Virus in Nederland</h1>' +
         '<div id="legend"></div><div id="radioDiv">' +
-        '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Cluster</label></div></div>' +
-        '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Cirkel</label></div></div></div>' +
+        '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Aantal</label></div></div>' +
+        '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Gemiddelde</label></div></div></div>' +
         `<p class="full"><b>totaal aantal positieve tests: </b>${aantalSum}&nbsp;&nbsp;<span title="${comment}"><i class="fa fa-asterisk"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></p>` +
         '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></span>`
       return controlDiv
@@ -184,7 +188,7 @@ Promise.all([getCSV(), getData()]).then(function(values) {
     style: function (feature) {
       return {
         fillColor: null,
-        weight: 1,
+        weight: 2,
         opacity: 1,
         color: '#878787',
         dashArray: '4',
@@ -209,8 +213,30 @@ Promise.all([getCSV(), getData()]).then(function(values) {
     style: getStyle()
   }).bindPopup(function (layer) {
     console.log(layer.feature.properties)
-    return getPopupHTML(layer.feature.properties.Gemeentenaam, layer.feature.properties.aantal)
+    return getPopupHTML(layer.feature.properties)
   })
+
+  const gemLayerChoro = L.geoJSON(gemeenten, {
+    // onEachFeature: onEachFeature,
+    style: function (feature) {
+      return {
+        fillColor: getColor(feature.properties.aantal_100k, choroBreaks, circleColors),
+        weight: 2,
+        opacity: 0,
+        color: 'white',
+        fillOpacity: (feature.properties.aantal_100k === 0) ? 0.3 : 1
+      }
+    },
+    attribution: 'Bron: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
+  }).bindPopup(function (layer) {
+    console.log(layer.feature)
+    if (map.hasLayer(gemLayerChoro)) {
+      return getPopupHTML(properties)
+    } else {
+      return getPopupHTML(properties)
+    }
+  })
+
   const geojsonMarkers = L.geoJSON(gemeentenPoint)
 
   // create the GeoJSON layer and call the styling function with each marker
@@ -227,7 +253,7 @@ Promise.all([getCSV(), getData()]).then(function(values) {
   markers.on('click', function (a) {
     L.popup()
       .setLatLng([a.layer._latlng.lat, a.layer._latlng.lng])
-      .setContent(getPopupHTML(a.layer.feature.properties.Gemeentenaam, a.layer.feature.properties.aantal))
+      .setContent(getPopupHTML(a.layer.feature.properties))
       .openOn(map)
   })
   var circles = L.geoJSON(gemeentenPoint, {
@@ -237,24 +263,28 @@ Promise.all([getCSV(), getData()]).then(function(values) {
       }
     }
   }).bindPopup(function (layer) {
-    return '<p>Gemeente ' + layer.feature.properties.Gemeentenaam + ': ' + layer.feature.properties.aantal + '<p>'
+    return getPopupHTML(layer.feature.properties.aantal)
   })
   const radiosViz = document.getElementsByName('viz')
   for (let i = 0, max = radiosViz.length; i < max; i++) {
     radiosViz[i].onclick = function () {
       let legend
       if (this.value === 'cluster') {
-        map.removeLayer(circles)
+        // map.removeLayer(circles)
+        map.removeLayer(gemLayerChoro)
         map.addLayer(markers)
         const markerBreaksCp = [...markerBreaks]
         markerBreaksCp.shift()
         legend = getLegend(markerBreaksCp, markerColors)
+        setBorders()
       } else {
         map.removeLayer(markers)
-        map.addLayer(circles)
-        const circleBreaksCp = [...circleBreaks]
+        // map.addLayer(circles)
+        map.addLayer(gemLayerChoro)
+        setBorders()
+        const circleBreaksCp = [...choroBreaks]
         circleBreaksCp.shift()
-        legend = getLegend(circleBreaksCp, circleColors)
+        legend = getLegend(circleBreaksCp, circleColors, 'Aantal positieve tests Covid-19 per 100.000 inwoners')
       }
       const legendDiv = document.getElementById('legend')
       legendDiv.innerHTML = ''
@@ -278,14 +308,19 @@ Promise.all([getCSV(), getData()]).then(function(values) {
       attr.classList.remove('show')
     }
   }
-
-  map.on('zoom', function () {
+  function setBorders () {
     var z = map.getZoom()
+    if (map.hasLayer(gemLayerChoro)) {
+      gemBordersLayer.removeFrom(map)
+      return gemBordersLayer.addTo(map)
+    }
     if (z >= 9 && z < 18) {
       return gemBordersLayer.addTo(map)
     }
     return gemBordersLayer.removeFrom(map)
-  })
+  }
+
+  map.on('zoom', setBorders)
 
   Array.prototype.forEach.call(document.getElementsByClassName('leaflet-layer'), function (el) {
     el.classList.add('dark')
@@ -364,14 +399,17 @@ function getCircleIcon (feature) {
   }
 }
 
-function getPopupHTML (naam, aantal) {
-  return '<p>Gemeente ' + naam + ': ' + aantal + '<p>'
+function getPopupHTML (properties) {
+  let rows = `<tr><td><b>Gemeente</b></td><td>${properties.Gemeentenaam}</td></tr>`
+  rows += `<tr><td><b>Aantal</b></td><td>${properties.aantal}</td></tr>`
+  rows += `<tr><td><b>Aantal per 100.000 inw</b></td><td>${properties.aantal_100k}</td></tr>`
+  return `<table>${rows}</table>`
 }
 
-function getLegend (breaks, colors) {
+function getLegend (breaks, colors, title = 'Aantal positieve tests Covid-19') {
   return legend({
     color: d3.scaleThreshold(breaks, colors),
-    title: 'Aantal positieve tests Covid-19',
+    title: title,
     tickSize: 0
   })
 }
