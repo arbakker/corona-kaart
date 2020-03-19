@@ -124,6 +124,7 @@ getCSV().then((data) => {
   L.control.command = function (options) {
     return new L.Control.Command(options)
   }
+  L.control.attribution({ prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>' }).addTo(map)
 
   L.control.command({}).addTo(map)
   const markers = L.markerClusterGroup({
@@ -157,7 +158,6 @@ getCSV().then((data) => {
     singleMarkerMode: true,
     attribution: 'Bron: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
   })
-  L.control.attribution({ prefix: '<a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://github.com/arbakker/corona-map-nl" title="Broncode kaart Corona Virus in Nederland">Broncode Kaart</a>' }).addTo(map)
 
   const backgroundLayer = L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaartwater/EPSG:3857/{z}/{x}/{y}.png',
     {
