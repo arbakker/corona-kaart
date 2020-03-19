@@ -19,6 +19,12 @@ geo2topo -q 1e5 -n gemeenten_borders=$BASE_DIR/gemeenten_ndjson.json | toposimpl
 # create simplified gemeenten borders polylines (outside)
 geo2topo -q 1e5 -n gemeenten_borders_outside=$BASE_DIR/gemeenten_ndjson.json | toposimplify -s 0.00000001 -f | topomerge --mesh -f 'a === b' gemeenten_borders_outside=gemeenten_borders_outside  | topo2geo $BASE_DIR/gemeenten_borders_outside.json 
 
-mkdir -p ../webapp/data-fixed/
-cp $BASE_DIR/gemeenten_borders.json  ../webapp/data-fixed/
-cp $BASE_DIR/gemeenten_borders_outside.json  ../webapp/data-fixed/
+ogr2ogr -f GeoJSON -lco "COORDINATE_PRECISION=6" "$DEST_DIR/gemeenten_points.json" "$DEST_DIR/gemeenten_simplified.json" -dialect SQLITE -sql "select centroid(Geometry) as geom, Code, Gemeentenaam from gemeenten_simplified" -nln gemeenten_points -nlt POINT -t_srs EPSG:4326
+
+mkdir -p ../webapp/data/
+cp $BASE_DIR/gemeenten_borders.json  ../webapp/data/
+cp $BASE_DIR/gemeenten_borders_outside.json  ../webapp/data/
+cp $DEST_DIR/gemeenten_simplified.json ../webapp/data/
+cp $DEST_DIR/gemeenten_points.json ../webapp/data/
+
+
