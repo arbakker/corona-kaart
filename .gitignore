@@ -111,3 +111,5 @@ id_rsa*
 script.sql
 
 data/
+webapp/updated.json
+webapp/corona.csv
