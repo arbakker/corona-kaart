@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 set -eu
+BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
+PAGES_DIR="$BASE_DIR/../gh-pages"
 
-git -C /corona/gh-pages pull
-git -C /corona/corona pull
+git -C "$PAGES_DIR" pull
+git -C "$BASE_DIR" pull
 
-cd /corona/corona/scripts
-./process-data.sh
-cp ../data/corona.csv /corona/gh-pages/
-cp ../data/updated.json /corona/gh-pages/
+"$BASE_DIR/scripts/process-data.sh"
 
-git -C /corona/gh-pages add --all
-git -C /corona/gh-pages commit -m "update corona.csv - $(date)"
-git -C /corona/gh-pages push
+cp "$BASE_DIR/data/corona.csv" "$PAGES_DIR/"
+cp "$BASE_DIR/data/updated.json" "$PAGES_DIR/"
+
+git -C "$PAGES_DIR" add --all
+git -C "$PAGES_DIR" commit -m "update corona.csv - $(date)"
+git -C "$PAGES_DIR" push
