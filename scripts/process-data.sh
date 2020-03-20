@@ -16,6 +16,5 @@ function download() {
 
 # call functions
 download
-rm -f "../data/gemeenten_points.json"
-echo "{\"date_data\": \"$DATE_DATA\",}" > ../webapp/updated.json
+echo "{\"date_data\": \"$DATE_DATA\"}" > ../webapp/updated.json
 cp "$DEST_CSV" "../webapp/$(basename $DEST_CSV)"

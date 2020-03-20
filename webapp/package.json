@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html && cp corona.csv dist/ && cp updated.json dist/",
-    "build": "parcel build --public-url . index.html && cp corona.csv dist/ && cp updated.json dist/"
+    "build": "rm -r dist/* && parcel build --public-url . index.html && cp corona.csv dist/ && cp updated.json dist/"
   },
   "author": "",
   "license": "MIT",

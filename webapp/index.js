@@ -71,7 +71,6 @@ function getData () {
 }
 
 Promise.all([getCSV(), getData()]).then(function (values) {
-  console.log(values)
   const data = values[0]
   const updated = values[1]
   data.forEach(function (itemData) {
@@ -118,9 +117,7 @@ Promise.all([getCSV(), getData()]).then(function (values) {
   }).setView([52, 5.3], 7)
 
   circleBreaks = ss.jenks(aantalArray, 5)
-  console.log(aant100kArray)
   choroBreaks = ss.jenks(aant100kArray, 5)
-  console.log(choroBreaks)
   const comment = data[0].Gemeente
   L.Control.Command = L.Control.extend({
     options: {
@@ -158,7 +155,6 @@ Promise.all([getCSV(), getData()]).then(function (values) {
       }
       const color = getColor(count, markerBreaks, markerColors)
       const classIndex = markerColors.indexOf(color) + 1
-      // console.log(count)
       return L.divIcon({
         html: '<div><span>' + count + '</span></div>',
         className: `marker-cluster marker-cluster-${classIndex}`,
@@ -212,7 +208,6 @@ Promise.all([getCSV(), getData()]).then(function (values) {
   // onEachFeature: onEachFeature,
     style: getStyle()
   }).bindPopup(function (layer) {
-    console.log(layer.feature.properties)
     return getPopupHTML(layer.feature.properties)
   })
 
@@ -229,12 +224,7 @@ Promise.all([getCSV(), getData()]).then(function (values) {
     },
     attribution: 'Bron: <a href="https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19">RIVM</a>'
   }).bindPopup(function (layer) {
-    console.log(layer.feature)
-    if (map.hasLayer(gemLayerChoro)) {
-      return getPopupHTML(properties)
-    } else {
-      return getPopupHTML(properties)
-    }
+    return getPopupHTML(layer.feature.properties)
   })
 
   const geojsonMarkers = L.geoJSON(gemeentenPoint)
@@ -379,10 +369,6 @@ function getBreaks (total) {
 
 function getCircleIcon (feature) {
   const aantal = parseInt(feature.properties.aantal)
-  // console.log(`aantal ${aantal}`)
-  // console.log(`A ${A}`)
-  // console.log(`aantalMin ${aantalMin}`)
-  // console.log(`min ${min}`)
   if (aantal > 0) {
     var calculatedSize = A * (aantal - aantalMin) + min
     var CustomIcon = L.Icon.extend({
@@ -400,7 +386,7 @@ function getCircleIcon (feature) {
 }
 
 function getPopupHTML (properties) {
-  let rows = `<tr><td><b>Gemeente</b></td><td>${properties.Gemeentenaam}</td></tr>`
+  let rows = `<tr><td><b>Gemeente </b></td><td>${properties.Gemeentenaam}</td></tr>`
   rows += `<tr><td><b>Aantal</b></td><td>${properties.aantal}</td></tr>`
   rows += `<tr><td><b>Aantal per 100.000 inw</b></td><td>${properties.aantal_100k}</td></tr>`
   return `<table>${rows}</table>`
