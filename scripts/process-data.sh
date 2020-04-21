@@ -13,7 +13,7 @@ function download() {
     sed -i "s/&#39;/'/" "$DEST_CSV"
     sed -i '/^$/d' "$DEST_CSV"
     sed -i 's/Aantal per 100.000 inwoners/Aant100k/g' "$DEST_CSV"
-    DATE_DATA=$(curl -sL "$URL_DATA" | pup 'div .content.with-background > p json{}' | jq -r '.[0].text' | sed  -E 's/aantal per //g')
+    DATE_DATA=$(curl -sL "$URL_DATA" | pup 'div .par.content-block-wrapper.bg-brand-lightest > div json{}' | jq -r '.[0].children[0].text' | cut -d":" -f2 | xargs )
 }
 
 # main
