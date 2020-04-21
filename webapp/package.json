@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html && cp corona.csv dist/ && cp updated.json dist/",
+    "start": "cp corona.csv dist/ && cp updated.json dist/ && parcel index.html",
     "build": "rm -r dist/* && parcel build --public-url . index.html && cp corona.csv dist/ && cp updated.json dist/"
   },
   "author": "",

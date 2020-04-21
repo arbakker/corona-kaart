@@ -50,8 +50,8 @@ function getCSV () {
         .then(function (result) {
           result.forEach(function (item) {
             if (parseInt(item.Gemnr) !== -1) {
-              aant100kArray.push(parseFloat(item.Aant100k))
-              aantalArray.push(parseInt(item.Aantal))
+              aant100kArray.push(parseFloat(item['Meldingen per 100k']))
+              aantalArray.push(parseInt(item.Meldingen))
               item.Gemnr = item.Gemnr.paddingLeft('0000')
             }
           })
@@ -75,7 +75,7 @@ Promise.all([getCSV(), getData()]).then(function (values) {
   const updated = values[1]
   data.forEach(function (itemData) {
     if (parseInt(itemData.Gemnr) !== -1) {
-      const tmp = parseInt(itemData.Aantal)
+      const tmp = parseInt(itemData.Meldingen)
       if (tmp < aantalMin) aantalMin = tmp
       if (tmp > aantalMax) aantalMax = tmp
       aantalSum += tmp
@@ -84,17 +84,17 @@ Promise.all([getCSV(), getData()]).then(function (values) {
     }
     gemeentenPoint.features.forEach(function (item) {
       if (itemData.Gemnr === item.properties.Code) {
-        item.properties.aantal = parseInt(itemData.Aantal)
+        item.properties.aantal = parseInt(itemData.Meldingen)
         item.properties.bev_aantal = parseInt(itemData.BevAant)
-        item.properties.aantal_100k = parseFloat(itemData.Aant100k)
+        item.properties.aantal_100k = parseFloat(itemData['Meldingen per 100k'])
       }
     })
     gemeenten.features.forEach(function (item) {
       if (itemData.Gemnr === item.properties.Code) {
-        item.properties.aantal = parseInt(itemData.Aantal)
+        item.properties.aantal = parseInt(itemData.Meldingen)
         item.properties.bev_aantal = parseInt(itemData.BevAant)
         item.properties.bev_aantal = parseInt(itemData.BevAant)
-        item.properties.aantal_100k = parseFloat(itemData.Aant100k)
+        item.properties.aantal_100k = parseFloat(itemData['Meldingen per 100k'])
       }
     })
   })
