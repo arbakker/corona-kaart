@@ -130,8 +130,8 @@ Promise.all([getCSV(), getData()]).then(function (values) {
         '<div id="legend"></div><div id="radioDiv">' +
         '<div class="pretty p-default p-round"><input id="cluster" type="radio" name="viz" value="cluster" checked><div class="state p-primary-o"><label>Aantal</label></div></div>' +
         '<div class="pretty p-default p-round"><input  id="circles" type="radio" name="viz" value="circles"><div class="state p-primary-o"><label>Gemiddelde</label></div></div></div>' +
-        `<p class="full"><b>totaal aantal positieve tests: </b>${aantalSum}&nbsp;&nbsp;<span title="${comment}"><i class="fa fa-asterisk"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></p>` +
-        '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}&nbsp;&nbsp;<span title="data wordt dagelijks ververst"><i class="fa fa-asterisk"></i></span></span>`
+        `<p class="full"><b>totaal aantal positieve tests: </b>${aantalSum}&nbsp;&nbsp;&nbsp;&nbsp;<b>peildatum: </b> ${updated.date_data}</p>` +
+        '</div>' + `<span class="mobile" style="font-size: 9px;position:absolute; right:5px;bottom:5px;"><b>peildatum: </b>${updated.date_data}</span>`
       return controlDiv
     }
   })
